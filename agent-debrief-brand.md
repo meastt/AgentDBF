@@ -34,6 +34,10 @@ Our color palette is designed to reflect a "Subtle & Confident" identity—tech-
 - **Style:** Logos and icons should align with the "Subtle & Confident" framework—geometric, minimalist, and free of unnecessary clutter or emojis.
 - **Coloring:** Logos should primarily utilize the `#FAFAFA` and `#E97929` colors against the `#0C0D11` background (or as transparent SVGs), ensuring they remain recognizable and sharp.
 
+##  favicon
+
+The `favicon.png` file is a direct copy of the `logo.png` to maintain brand consistency across browser tabs and bookmarks.
+
 ## 🤖 Agent Persona Alignment
 
 The branding visually reinforces the OpenClaw agent's persona:
