@@ -34,13 +34,14 @@
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <span class="badge">Issue #001 dropping soon</span>
+                    <span class="badge">Decoding the Agentic Frontier</span>
                     <h1 class="hero-title">Don't Get Left Behind by the <span>Agentic AI</span> Explosion.</h1>
                     <p class="hero-subtitle">The fastest-moving weekly debrief on OpenClaw, autonomous agents, and the tools builders are using right now. <strong>Pure signal, no noise.</strong></p>
                     
-                    <form class="subscribe-form" id="subscribe" onsubmit="event.preventDefault(); alert('Submission simulated!');">
+                    <form action="https://buttondown.com/api/emails/embed-subscribe/agentdebrief" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/agentdebrief', 'popupwindow')" class="subscribe-form" id="subscribe">
                         <div class="input-group">
-                            <input type="email" placeholder="Enter your email address..." required aria-label="Email address">
+                            <input type="email" name="email" placeholder="Enter your email address..." required aria-label="Email address">
+                            <input type="hidden" value="1" name="embed" />
                             <button type="submit" class="btn btn-primary">Get the Debrief</button>
                         </div>
                         <p class="privacy-note">No spam. One high-signal email per week.</p>
