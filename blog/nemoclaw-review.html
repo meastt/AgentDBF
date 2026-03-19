@@ -26,7 +26,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TechArticle",
+      "@type": "Article",
       "headline": "NemoClaw Review: NVIDIA's Answer to Agentic AI Security",
       "description": "Hands-on review of NemoClaw — NVIDIA's security stack for OpenClaw. Installation, features, and how it compares to vanilla OpenClaw.",
       "author": {
@@ -163,6 +163,23 @@
 
                 <p>I spent a week running NemoClaw against a variety of agent workloads. Here is what it actually does, how to set it up, where it helps, and where it falls short. For full installation docs, visit <a href="https://docs.openclaw.ai">the OpenClaw documentation</a>.</p>
 
+                <h2>Quick Takeaways</h2>
+                <ul>
+                    <li>NemoClaw evaluates agent actions in context using NVIDIA's Nemotron policy models.</li>
+                    <li>With strict policy, it blocks dangerous actions like out-of-workspace file writes and unapproved network destinations.</li>
+                    <li>Installation is a one-command process: `curl -fsSL https://get.nemoclaw.ai | sh`.</li>
+                    <li>Compared to raw OpenClaw, NemoClaw adds a semantic policy layer (fewer, more meaningful “denied” events).</li>
+                    <li>It adds operational complexity, so it is best when your risk surface is real.</li>
+                </ul>
+
+                <h3>Practical Setup Checklist</h3>
+                <ol>
+                    <li>Start with a least-privilege OpenClaw configuration for the task.</li>
+                    <li>Install NemoClaw and confirm the service is reachable for your OpenClaw runtime.</li>
+                    <li>Enable the sandbox/policy section in `openclaw.json` with `strict` for production.</li>
+                    <li>Test a couple of real workflows and review policy decisions in logs.</li>
+                </ol>
+
                 <h2>What NemoClaw Actually Does</h2>
 
                 <figure>
@@ -206,6 +223,26 @@
                 <p>For someone just getting started with OpenClaw, NemoClaw is probably premature. Get comfortable with the <a href="/blog/openclaw-getting-started">basic sandbox first</a>, understand what your agents are doing, and add NemoClaw when you have a real need for the additional controls. If you are not yet familiar with <a href="/blog/what-is-agentic-ai">how agentic AI works</a>, start there first. It is not a replacement for learning how OpenClaw's permission system works — it is a layer on top of it.</p>
 
                 <p>The installation command is simple and the runtime overhead is reasonable. If you have a use case that involves sensitive data or complex network topology, it is worth evaluating. The security gains are real, even if they are hard to quantify in advance. Whether those gains justify the additional complexity depends entirely on what you are running and what the consequences of a compromise would be.</p>
+
+                <section class="faq" aria-label="Frequently asked questions">
+                    <h2>FAQ</h2>
+                    <details>
+                        <summary>Is NemoClaw free to use?</summary>
+                        <p>NemoClaw itself is free. The installation binary and OpenShell runtime are open source. However, the Nemotron policy model requires accepting NVIDIA's research license, which permits commercial use but has restrictions on redistribution. For enterprise deployments with specific compliance requirements, contact NVIDIA directly.</p>
+                    </details>
+                    <details>
+                        <summary>What platforms does NemoClaw support?</summary>
+                        <p>NemoClaw runs on Linux natively and macOS through Docker Desktop. Windows support is available via WSL2. Cloud instances on AWS, GCP, Oracle Cloud, and Azure work without issues. The resource footprint is modest - roughly 200MB of additional memory overhead once the service is running.</p>
+                    </details>
+                    <details>
+                        <summary>How does NemoClaw differ from OpenClaw's basic sandbox?</summary>
+                        <p>OpenClaw's basic sandbox enforces tool-level allowlists inside a Docker container. NemoClaw adds a policy evaluation layer using Nemotron models that understand the context of an action. A basic sandbox blocks all network calls except to allowed hosts. NemoClaw evaluates whether a specific outbound call is part of the agent's legitimate workflow or an attempt to exfiltrate data, even if the destination is technically permitted.</p>
+                    </details>
+                    <details>
+                        <summary>What does the OpenShell runtime do?</summary>
+                        <p>OpenShell is a lightweight container runtime designed for the rapid-start, short-lived container pattern that agentic workloads create. Unlike standard Docker containers that spin up once and run continuously, OpenShell containers start when an agent begins a task and stop when it finishes. This reduces resource overhead and ensures a clean environment for every task.</p>
+                    </details>
+                </section>
 
                 <hr>
 

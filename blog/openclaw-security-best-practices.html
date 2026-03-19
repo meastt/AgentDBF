@@ -26,7 +26,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TechArticle",
+      "@type": "Article",
       "headline": "OpenClaw Security Best Practices: What Every Builder Needs to Know",
       "description": "Master OpenClaw security: least privilege, sandboxing with NemoClaw, API key management, and audit logging. A practical guide for builders.",
       "author": {
@@ -171,6 +171,24 @@
 
                 <p>This guide covers what actually matters: the permission model, how to handle API keys, what NemoClaw does for you, how to monitor what your agents are doing, and the specific mistakes I see most often. Bookmark it and come back when you are setting up something new.</p>
 
+                <h2>Quick Takeaways</h2>
+                <ul>
+                    <li>Start from zero permissions: give your agent only the tools it needs.</li>
+                    <li>Protect API keys with environment variables and rotate regularly.</li>
+                    <li>Use NemoClaw (strict policy) for contextual sandbox enforcement.</li>
+                    <li>Monitor logs early to establish a baseline and catch deviations.</li>
+                    <li>Avoid root/sudo execution and overpermissioning before production.</li>
+                </ul>
+
+                <h3>Security Checklist</h3>
+                <ol>
+                    <li>Define least-privilege tool access for the task.</li>
+                    <li>Load API keys from a secure `.env` setup and rotate every 90 days.</li>
+                    <li>Enable NemoClaw in `openclaw.json` and keep it on `strict`.</li>
+                    <li>Review `openclaw logs` (tool/errors/sandbox) during your first week.</li>
+                    <li>Keep log rotation configured and avoid running agents as root.</li>
+                </ol>
+
                 <h2>The Permission Model: Start from Zero</h2>
 
                 <p>OpenClaw's security model is built around least privilege. Your agent gets exactly the permissions it needs to do its job, nothing else. This is not a suggestion. The architecture enforces it. When you define an agent, you specify which tools it can access. Each tool has its own set of capabilities. Filesystem, network calls, shell commands, browser control — these are all separate permissions that you grant individually. By default, none of them are enabled.</p>
@@ -242,6 +260,30 @@
                 <p>Last, do not ignore log rotation. Audit logs grow and eventually consume disk space. Configure log rotation or size limits so you always have recent logs available without filling your disk. This is easy to forget until you are troubleshooting an incident and find that logs stopped three weeks ago because the disk filled up.</p>
 
                 <p>Security is not a configuration you set once and forget. It requires ongoing attention as your agent's capabilities and connectivity evolve. The practices here give you a solid foundation, but stay current with OpenClaw releases, review your configurations periodically, and treat security as a continuing process rather than a checklist item you tick off and move on.</p>
+
+                <section class="faq" aria-label="Frequently asked questions">
+                    <h2>FAQ</h2>
+                    <details>
+                        <summary>What is the principle of least privilege in OpenClaw?</summary>
+                        <p>Least privilege means your agent gets exactly the permissions it needs to complete its task and nothing else. By default, no tools are enabled. You add filesystem, network, shell, or browser access deliberately. This limits the damage a misbehaving or compromised agent can do.</p>
+                    </details>
+                    <details>
+                        <summary>How do I protect my API key in OpenClaw?</summary>
+                        <p>Store your API key in a .env file and reference it as an environment variable in openclaw.json. Never commit .env or openclaw.json to version control. Rotate your key every 90 days. For production, use a secrets manager like AWS Secrets Manager or HashiCorp Vault.</p>
+                    </details>
+                    <details>
+                        <summary>What does NemoClaw actually do?</summary>
+                        <p>NemoClaw wraps your OpenClaw agent in a Docker-based sandbox with policy-based controls. It uses NVIDIA Nemotron models to evaluate whether a specific action should be allowed, based on context rather than just a simple rule match. With the strict policy, it blocks file writes outside the workspace, unknown network destinations, and non-whitelisted shell commands.</p>
+                    </details>
+                    <details>
+                        <summary>What are the most common OpenClaw security mistakes?</summary>
+                        <p>Running agents as root or with sudo is the most frequent issue. Overpermissioning and skipping NemoClaw (plus ignoring log rotation) round out the list. All three are avoidable with proper setup discipline.</p>
+                    </details>
+                    <details>
+                        <summary>How do I monitor what my OpenClaw agents are doing?</summary>
+                        <p>OpenClaw logs all tool invocations, API calls, and agent decisions locally. Use <code>openclaw logs --tool</code>, <code>openclaw logs --errors</code>, and <code>openclaw logs --sandbox</code> to filter by event type. For production agents handling sensitive data, ship logs to a centralized service like Loki or Elasticsearch so you can correlate events across multiple agents.</p>
+                    </details>
+                </section>
 
                 <hr>
 
