@@ -255,6 +255,170 @@ body {
     font-size: 0.95rem;
 }
 
+/* ─── Article Layout ─────────────────────────────────── */
+.article-main {
+    padding: 3rem 0 5rem;
+}
+
+.article-content {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.article-header {
+    margin-bottom: 2.5rem;
+}
+
+.article-header h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    margin: 0.75rem 0 0.5rem;
+}
+
+.article-meta {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-sep {
+    color: var(--text-secondary);
+    opacity: 0.4;
+}
+
+/* Article body text */
+.article-content p {
+    line-height: 1.8;
+    margin-bottom: 1.4rem;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.article-content p strong {
+    color: var(--text-primary);
+}
+
+.article-content h2 {
+    font-size: 1.4rem;
+    font-weight: 650;
+    margin: 3rem 0 1rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.article-content h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 2rem 0 0.75rem;
+    color: var(--text-primary);
+}
+
+.article-content ul,
+.article-content ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.4rem;
+}
+
+.article-content li {
+    line-height: 1.75;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.article-content li strong {
+    color: var(--text-primary);
+}
+
+.article-content a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+}
+
+.article-content a:hover {
+    text-decoration: underline;
+}
+
+.article-content hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin: 3rem 0;
+}
+
+/* Code blocks */
+.article-content code {
+    font-family: 'SFMono-Regular', 'Fira Code', 'Fira Mono', Consolas, monospace;
+    font-size: 0.875em;
+    background: rgba(0, 241, 255, 0.06);
+    border: 1px solid rgba(0, 241, 255, 0.12);
+    border-radius: 4px;
+    padding: 0.15em 0.4em;
+    color: #a8dadc;
+}
+
+.article-content pre {
+    background: #0d1117;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0 2rem;
+    position: relative;
+}
+
+.article-content pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #cdd9e5;
+    line-height: 1.7;
+}
+
+/* Figures */
+.article-content figure {
+    margin: 2.5rem 0;
+}
+
+.article-content figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.07);
+    display: block;
+}
+
+.article-content figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.65rem;
+    opacity: 0.7;
+}
+
+/* ─── Footer ──────────────────────────────────────────── */
 /* Footer */
 .site-footer {
     margin-top: auto;

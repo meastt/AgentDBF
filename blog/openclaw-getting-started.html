@@ -169,16 +169,20 @@
     <main class="article-main">
         <div class="container">
             <article class="article-content">
+                <nav class="breadcrumb">
+                    <a href="/blog">&larr; Blog</a>
+                    <span class="breadcrumb-sep">/</span>
+                    <span>How to Install OpenClaw</span>
+                </nav>
                 <header class="article-header">
                     <span class="badge">Guide</span>
                     <h1>How to Install OpenClaw: A Step-by-Step Guide</h1>
-                    <p class="article-meta">Published March 19, 2026 · 10 min read</p>
+                    <p class="article-meta">Published March 19, 2026 &middot; 10 min read</p>
                 </header>
 
-                <!-- Featured Image -->
-                <figure style="margin: 2rem 0;">
-                    <img src="/images/openclaw-install-featured.jpg" alt="OpenClaw installation guide featured image" style="width: 100%; height: auto; border-radius: 12px;">
-                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">Your first agent, up and running in under 10 minutes</figcaption>
+                <figure>
+                    <img src="/images/openclaw-install-featured.jpg" alt="OpenClaw installation guide featured image">
+                    <figcaption>Your first agent, up and running in under 10 minutes</figcaption>
                 </figure>
 
                 <p>If you have used ChatGPT, you know the pattern: open a chat, ask a question, get an answer. Useful for quick tasks, but it resets every time. Nothing persists. Nothing connects to your real workflow.</p>
@@ -187,10 +191,9 @@
 
                 <p>This guide walks you through installing OpenClaw on macOS, Linux, or Windows (WSL2), setting up the NemoClaw security sandbox, and running your first agent in under 10 minutes.</p>
 
-                <!-- In-content Image: Why OpenClaw -->
-                <figure style="margin: 2rem 0;">
-                    <img src="/images/openclaw-install-prereqs.jpg" alt="OpenClaw prerequisites: Node.js, Docker, and API key" style="width: 100%; height: auto; border-radius: 12px;">
-                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">Everything you need before you install: Node.js, Docker, and an API key</figcaption>
+                <figure>
+                    <img src="/images/openclaw-install-prereqs.jpg" alt="OpenClaw prerequisites: Node.js, Docker, and API key">
+                    <figcaption>Everything you need before you install: Node.js, Docker, and an API key</figcaption>
                 </figure>
 
                 <h2>Prerequisites</h2>
@@ -281,15 +284,13 @@
 
                 <p>If the agent does not respond, check that Docker is running (<code>docker ps</code>) and that your API key is correctly set in <code>openclaw.json</code>. See the troubleshooting section below for common issues.</p>
 
-                <!-- In-content Image: Troubleshooting -->
-                <figure style="margin: 2rem 0;">
-                    <img src="/images/openclaw-install-troubleshoot.jpg" alt="Common OpenClaw installation errors and their fixes" style="width: 100%; height: auto; border-radius: 12px;">
-                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">When things go wrong, here's how to fix them quickly</figcaption>
+                <figure>
+                    <img src="/images/openclaw-install-troubleshoot.jpg" alt="Common OpenClaw installation errors and their fixes">
+                    <figcaption>When things go wrong, here's how to fix them quickly</figcaption>
                 </figure>
 
-                <h2>Troubleshooting</h2>
+                <h2>How OpenClaw Stays Safe</h2>
 
-                <p>OpenClaw is designed so that by default, your agent cannot do anything destructive without explicit permission. Here is how the permission model works.</p>
 
                 <p><strong>The sandbox blocks unauthorized actions.</strong> With NemoClaw enabled and policy set to strict, your agent cannot write files outside its workspace, cannot make arbitrary network requests, and cannot run shell commands that are not explicitly whitelisted.</p>
 
@@ -347,11 +348,6 @@ export PATH=~/npm-global/bin:$PATH</code></pre>
 
                 <p>Ready to go deeper on agentic AI? Subscribe to the Agent Debrief newsletter for weekly guides, analysis, and real-world use cases from builders who are actually shipping with autonomous agents.</p>
 
-                <!-- Infographic -->
-                <figure style="margin: 3rem 0;">
-                    <img src="/images/openclaw-install-troubleshoot.jpg" alt="OpenClaw installation steps infographic" style="width: 100%; height: auto; border-radius: 12px;">
-                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">From zero to running agent: the full installation path</figcaption>
-                </figure>
 
                 <!-- Author Bio Box -->
                 <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 1px solid rgba(0, 245, 255, 0.2); border-radius: 12px; padding: 2rem; margin: 3rem 0;">
@@ -374,8 +370,5 @@ export PATH=~/npm-global/bin:$PATH</code></pre>
             </div>
         </div>
     </footer>
-</body>
-</html>
-er>
 </body>
 </html>
