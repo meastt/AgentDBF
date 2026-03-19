@@ -95,6 +95,34 @@
       ]
     }
     </script>
+
+    <!-- BreadcrumbList JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://agentdebrief.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://agentdebrief.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What Is Agentic AI?",
+          "item": "https://agentdebrief.com/blog/what-is-agentic-ai"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="glow-bg"></div>
@@ -120,6 +148,12 @@
                     <p class="article-meta">Published March 19, 2026 · 8 min read</p>
                 </header>
 
+                <!-- Featured Image -->
+                <figure style="margin: 2rem 0;">
+                    <img src="https://picsum.photos/1200/675?random=1" alt="What Is Agentic AI featured image" style="width: 100%; height: auto; border-radius: 12px;">
+                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">Featured image: Agentic AI in action</figcaption>
+                </figure>
+
                 <p>You keep hearing "agentic AI" everywhere. Every tech blog, every startup. But what does it actually mean — and more importantly, what does it mean for <em>you</em>, your work, and the tools you use?</p>
 
                 <p>Here's the short version.</p>
@@ -144,6 +178,12 @@
 
                 <p>All of that, autonomously. You gave it one instruction: "Research Competitor X." It handled the rest.</p>
 
+                <!-- In-content Image: Agent Workflow -->
+                <figure style="margin: 2rem 0;">
+                    <img src="https://picsum.photos/800/450?random=2" alt="Agentic AI workflow diagram showing goal input, planning, tool use, and result output" style="width: 100%; height: auto; border-radius: 12px;">
+                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">How an agentic AI processes a multi-step research task</figcaption>
+                </figure>
+
                 <h2>Why this matters now</h2>
 
                 <p>Three things converged in early 2026 to make agentic AI viable for everyday use:</p>
@@ -153,6 +193,8 @@
                     <li><strong>Context windows exploded.</strong> 1M token context windows mean an agent can hold an entire codebase, years of emails, or a company's documentation in memory at once.</li>
                     <li><strong>Tool use got standardized.</strong> Protocols like MCP (Model Context Protocol) gave AI a universal way to connect to browsers, databases, calendars, code editors, and APIs without custom integration work.</li>
                 </ul>
+
+                <img src="/images/agentic-ai-why-now.jpg" alt="Why agentic AI now" style="width:100%;max-width:800px;display:block;margin:2rem auto;border-radius:8px;">
 
                 <h2>The security question everyone asks first</h2>
 
@@ -220,3 +262,5 @@
     </footer>
 </body>
 </html>
+/html>
+
