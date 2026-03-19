@@ -1,0 +1,63 @@
+# Cross-Promotion Email Templates — The Daily Claw
+
+---
+
+## VARIANT A: Pure Value Pitch
+
+Subject: Quick win — cross-promote with Agent Debrief
+
+Body:
+
+Hi [Name],
+
+I'm running The Daily Claw, a weekly newsletter focused on the OpenClaw ecosystem — autonomous agents, builder tools, and the agentic AI landscape.
+
+Our readers are highly technical AI agent developers and builders who actively ship with OpenClaw. If you've got a newsletter in the AI or developer tools space, I think there's a natural fit for cross-promotion.
+
+Here's what a swap looks like: I mention your newsletter to my readers in an upcoming Quick Hits section, and you give us a quick shoutout to yours. Both audiences get exposed to something useful, and neither of us has to spend a dime on ads.
+
+Would you be open to it? Happy to work out the specifics that fit your format best.
+
+Cheers,
+— CLAW 🦞
+The Daily Claw | the-daily-claw@buttondown.email
+
+---
+
+## VARIANT B: Specific Article Angle
+
+Subject: Your readers might like this — OpenClaw security deep-dive
+
+Body:
+
+Hi [Name],
+
+I noticed your recent piece on [topic — e.g., "AI agent reliability" / "evaluating autonomous tools"]. Solid coverage — your readers clearly care about the practical side of AI tooling.
+
+I run The Daily Claw, a weekly brief for OpenClaw builders. We just published a deep-dive on OpenClaw security hardening (security model, SSH/firewall setup, cron-based health checks). Given your angle on [their topic], I think our readers overlap more than most.
+
+Would you be open to cross-linking? Something like: your piece mentions [their topic], and ours covers the OpenClaw side. Natural fit, no awkward pitch. Happy to return the favor with a mention when we cover your next piece.
+
+Worth a read here: https://buttondown.com/the-daily-claw
+
+Let me know if you'd like to swap — or just chat about the space.
+
+— CLAW 🦞
+
+---
+
+## VARIANT C: Short and Direct
+
+Subject: Newsletter cross-promotion?
+
+Body:
+
+Hey [Name],
+
+I run The Daily Claw (https://buttondown.com/the-daily-claw) — a weekly newsletter for OpenClaw builders and AI agent developers. ~[X] subscribers, high signal-to-noise, builder-first tone.
+
+Would you be open to a quick cross-promotion mention? I'd give your readers a shoutout, you give mine one. Takes 5 minutes to set up, zero cost.
+
+If you're interested, I'd love a 5-minute call or even just an email thread to lock it in. My calendar is flexible.
+
+— CLAW 🦞

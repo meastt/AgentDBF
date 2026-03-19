@@ -1,0 +1,115 @@
+# Newsletter Cross-Promotion Target List
+
+## Criteria
+- AI/developer-focused audience
+- Active newsletter (regular cadence)
+- Audience overlaps with OpenClaw builders and agentic AI developers
+- Platform: Buttondown or Substack preferred (easiest to verify and pitch)
+
+---
+
+## 1. The Batch
+
+- **URL:** https://www.syntheticwork.com/
+- **Platform:** Substack
+- **Audience:** ~15K (est.) — AI workers, automation builders, AI tool evaluators
+- **Fit:** Deeply focused on AI agent workflows and practical automation. Strong overlap with OpenClaw builders who are actively deploying agents. Frequent coverage of OpenClaw ecosystem.
+
+---
+
+## 2. The Rundown
+
+- **URL:** https://therundown.ai/
+- **Platform:** Substack
+- **Audience:** ~10K (est.) — AI enthusiasts, builders, startup folks
+- **Fit:** Daily AI news with a practical edge. OpenClaw updates and agentic AI developments would fit naturally in their mix.
+
+---
+
+## 3. There's an AI For That — Newsletter
+
+- **URL:** https://therundown.beehiiv.com/ (or direct)
+- **Platform:** Beehiiv
+- **Audience:** ~20K (est.)
+- **Fit:** Tool-focused AI coverage. OpenClaw skills and builder tips would land well with their audience of AI tool early adopters.
+
+---
+
+## 4. Prompt Engineering (DeepMind/associated)
+
+- **URL:** https://newsletter.promptengineering.org/
+- **Platform:** Buttondown
+- **Audience:** ~8K (est.) — researchers, developers, AI practitioners
+- **Fit:** Technical audience working on agentic systems. Cross-promotion of OpenClaw builder content would be highly relevant.
+
+---
+
+## 5. TLDR AI
+
+- **URL:** https://tldrnewsletters.com/
+- **Platform:** Custom (widely syndicated)
+- **Audience:** ~500K across all newsletters
+- **Fit:** Massive reach. Even a single mention in the AI TLDR edition would drive significant awareness. Harder to pitch but highest ceiling.
+
+---
+
+## 6. The Neuron
+
+- **URL:** https://theneuron.io/newsletter
+- **Platform:** Substack
+- **Audience:** ~5K (est.) — AI developers, builders, indie hackers
+- **Fit:** Indie AI builder focus. Strong cultural fit with OpenClaw's builder community. Good candidate for reciprocal swaps.
+
+---
+
+## 7. Ship It
+
+- **URL:** https://shipit.so/
+- **Platform:** Substack
+- **Audience:** ~12K (est.) — developers, indie hackers, makers
+- **Fit:** Developer-focused with an emphasis on shipping. OpenClaw's autonomous agent workflows are a natural topic. Practical tone matches ours.
+
+---
+
+## 8. Last Week in AI
+
+- **URL:** https://lastweekinai.com/
+- **Platform:** Substack
+- **Audience:** ~7K (est.) — AI researchers, practitioners, enthusiasts
+- **Fit:** Weekly roundup of AI developments. Technical but accessible. OpenClaw ecosystem news would fit well in their weekly recap.
+
+---
+
+## 9. Fermat's Newsletter
+
+- **URL:** https://fermatslibrary.com/newsletter
+- **Platform:** Buttondown (est.)
+- **Audience:** ~15K (est.) — math/CS enthusiasts, ML practitioners
+- **Fit:** More academic/technical than typical AI news. OpenClaw's architecture and agent design would resonate with this audience.
+
+---
+
+## 10. HotTakes AI
+
+- **URL:** https://hottakes.io/ai
+- **Platform:** Substack
+- **Audience:** ~4K (est.) — contrarian AI takes, builders, skeptics
+- **Fit:** Sharp, opinionated coverage of AI tools. Good fit for honest OpenClaw takes and builder-level critiques rather than hype.
+
+---
+
+## Outreach Priority (Tier 1 — Pitch First)
+
+1. The Neuron (small, indie, cultural fit)
+2. Ship It (developer-focused, natural content overlap)
+3. The Batch (already covers OpenClaw, likely warm)
+4. Last Week in AI (weekly format matches ours)
+5. TLDR AI (highest reach, worth the shot)
+
+## Tier 2 — When Tier 1 is exhausted
+
+6. The Rundown
+7. There's an AI For That
+8. Prompt Engineering
+9. Fermat's Newsletter
+10. HotTakes AI
