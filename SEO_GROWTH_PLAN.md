@@ -138,7 +138,9 @@ Add the following structured data to every content page on agentdebrief.com:
 - [ ] Add Open Graph + Twitter Card meta on every page *(partially done)*
 - [ ] Implement `FAQPage` and `Article` JSON-LD schema
 - [ ] Ensure all pages are < 3 seconds load time (Vercel helps here)
-- [ ] Add a `/blog` or `/articles` section to the site for SEO content
+- [x] Add a `/blog` section with an `index.html` feed
+- [ ] Implement clean URLs for articles using the directory pattern: `/blog/[article-slug]/index.html`
+- [ ] Ensure `vercel.json` is configured for clean blog routing
 - [ ] Internal linking strategy: every article links to 2–3 other articles
 - [ ] Add breadcrumb navigation with schema
 
@@ -217,7 +219,7 @@ Add the following structured data to every content page on agentdebrief.com:
 
 ## 9. Quick Wins (Start This Week)
 
-1. **Add a `/blog` section** to agentdebrief.com — even a simple index page that lists articles.
+1. **Maintain the `/blog` section** — Use `blog/index.html` as the feed and `/blog/[slug]/index.html` for clean-URL articles.
 2. **Publish the first pillar article** — "What Is Agentic AI?" with full schema markup.
 3. **Add `sitemap.xml` and `robots.txt`** to the Vercel deployment.
 4. **Submit the site to Google Search Console** and request indexing.
