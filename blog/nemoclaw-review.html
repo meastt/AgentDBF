@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NemoClaw Review: NVIDIA's Answer to Agentic AI Security | Agent Debrief</title>
+    <meta name="description" content="Hands-on review of NemoClaw — NVIDIA's security stack for OpenClaw. Installation, features, and how it compares to vanilla OpenClaw.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://agentdebrief.com/blog/nemoclaw-review">
+    <link rel="stylesheet" href="/index.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="NemoClaw Review: NVIDIA's Answer to Agentic AI Security">
+    <meta property="og:description" content="Hands-on review of NemoClaw — NVIDIA's security stack for OpenClaw. Installation, features, and how it compares to vanilla OpenClaw.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://agentdebrief.com/blog/nemoclaw-review">
+    <meta property="og:image" content="https://agentdebrief.com/images/nemoclaw-review-featured.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NemoClaw Review: NVIDIA's Answer to Agentic AI Security">
+    <meta name="twitter:description" content="Hands-on review of NemoClaw — NVIDIA's security stack for OpenClaw. Installation, features, and how it compares to vanilla OpenClaw.">
+    <meta name="twitter:image" content="https://agentdebrief.com/images/nemoclaw-review-featured.jpg">
+
+    <!-- TechArticle JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "NemoClaw Review: NVIDIA's Answer to Agentic AI Security",
+      "description": "Hands-on review of NemoClaw — NVIDIA's security stack for OpenClaw. Installation, features, and how it compares to vanilla OpenClaw.",
+      "author": {
+        "@type": "Organization",
+        "name": "Agent Debrief",
+        "url": "https://agentdebrief.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Agent Debrief",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://agentdebrief.com/logo.png"
+        }
+      },
+      "datePublished": "2026-03-19",
+      "dateModified": "2026-03-19",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "NemoClaw",
+        "applicationCategory": "DeveloperTools",
+        "url": "https://nvidia.com/nemoclaw"
+      },
+      "keywords": ["NemoClaw review", "NVIDIA NemoClaw", "OpenClaw security", "OpenShell", "NVIDIA Nemotron"],
+      "wordCount": 1200,
+      "inLanguage": "en-US"
+    }
+    </script>
+
+    <!-- FAQPage JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is NemoClaw free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NemoClaw itself is free. The installation binary and OpenShell runtime are open source. However, the Nemotron policy model requires accepting NVIDIA's research license, which permits commercial use but has restrictions on redistribution. For enterprise deployments with specific compliance requirements, contact NVIDIA directly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What platforms does NemoClaw support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NemoClaw runs on Linux natively and macOS through Docker Desktop. Windows support is available via WSL2. Cloud instances on AWS, GCP, Oracle Cloud, and Azure work without issues. The resource footprint is modest — roughly 200MB of additional memory overhead once the service is running."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does NemoClaw differ from OpenClaw's basic sandbox?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OpenClaw's basic sandbox enforces tool-level allowlists inside a Docker container. NemoClaw adds a policy evaluation layer using Nemotron models that understand the context of an action. A basic sandbox blocks all network calls except to allowed hosts. NemoClaw evaluates whether a specific outbound call is part of the agent's legitimate workflow or an attempt to exfiltrate data, even if the destination is technically permitted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the OpenShell runtime do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OpenShell is a lightweight container runtime designed for the rapid-start, short-lived container pattern that agentic workloads create. Unlike standard Docker containers that spin up once and run continuously, OpenShell containers start when an agent begins a task and stop when it finishes. This reduces resource overhead and ensures a clean environment for every task."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://agentdebrief.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://agentdebrief.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "NemoClaw Review",
+          "item": "https://agentdebrief.com/blog/nemoclaw-review"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="glow-bg"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="/" class="brand">
+                    <img src="/logo.png" alt="Agent Debrief" class="brand-logo">
+                </a>
+                <a href="/lead" class="btn btn-primary">Get the Starter Kit</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-main">
+        <div class="container">
+            <article class="article-content">
+                <nav class="breadcrumb">
+                    <a href="/blog">&larr; Blog</a>
+                    <span class="breadcrumb-sep">/</span>
+                    <span>NemoClaw Review</span>
+                </nav>
+                <header class="article-header">
+                    <span class="badge">Review</span>
+                    <h1>NemoClaw Review: NVIDIA's Answer to Agentic AI Security</h1>
+                    <p class="article-meta">Published March 19, 2026 &middot; 8 min read</p>
+                </header>
+
+                <figure>
+                    <img src="/images/nemoclaw-review-featured.jpg" alt="NemoClaw review featured image">
+                    <figcaption>NVIDIA's security layer for OpenClaw, reviewed</figcaption>
+                </figure>
+
+                <p>NemoClaw launched at GTC 2026 in March as NVIDIA's answer to a problem that was not theoretical anymore. Autonomous agents were running in production, connecting to real systems, handling real data — and the security model had not caught up. OpenClaw's built-in sandbox was a start, but NVIDIA saw an opportunity to build something more serious: a purpose-built security stack that understood what agents were trying to do and could make intelligent decisions about whether to let them do it.</p>
+
+                <p>I spent a week running NemoClaw against a variety of agent workloads. Here is what it actually does, how to set it up, where it helps, and where it falls short.</p>
+
+                <h2>What NemoClaw Actually Does</h2>
+
+                <p>NemoClaw combines two things NVIDIA had already built separately: the Nemotron family of LLMs and the OpenShell container runtime. Nemotron models are trained on security-relevant datasets and fine-tuned to evaluate agent behavior against policy rules. OpenShell is a lightweight container runtime optimized for the rapid-start, short-lived container pattern that agentic workloads create. NemoClaw is the layer that connects them to OpenClaw.</p>
+
+                <figure>
+                    <img src="/images/nemoclaw-architecture.jpg" alt="NemoClaw architecture diagram showing OpenShell sandbox, Nemotron models, and policy guardrails">
+                    <figcaption>How the pieces fit together: OpenShell runs the agent, Nemotron evaluates actions against policy</figcaption>
+                </figure>
+
+                <p>When your agent tries to do something — write a file, make a network request, run a command — OpenShell intercepts it and asks the Nemotron policy model whether this action is allowed under your configured policy. The model looks at the context: what the agent has done recently, what the current task is, what the potential consequences are. It is not a simple keyword filter. It is a real security decision made by a model that understands the semantics of the action.</p>
+
+                <p>This matters because rule-based systems break down when agents do things that were not anticipated. A simple "deny all outbound connections except ports 80 and 443" rule will block a legitimate API call to a non-standard port just as effectively as it blocks exfiltration. The Nemotron model can distinguish between an agent making a necessary HTTP call to a legitimate service and one that is attempting to beacon out to a command-and-control server. The difference is substantial in practice.</p>
+
+                <h2>Installation and Platform Support</h2>
+
+                <p>One command handles the entire installation:</p>
+
+<pre><code>curl -fsSL https://get.nemoclaw.ai | sh</code></pre>
+
+                <figure>
+                    <img src="/images/nemoclaw-install.jpg" alt="Terminal showing NemoClaw one-command installation">
+                    <figcaption>The full install, start to finish, in one command</figcaption>
+                </figure>
+
+                <p>NVIDIA packages everything as a single binary that pulls the necessary container images on first run, so there is no manual Docker configuration or registry setup required. The setup process involves adding a few lines to your openclaw.json to point OpenClaw at the NemoClaw endpoint, then restarting your agent. First-time setup takes a few minutes depending on your internet connection and whether you already have the base images cached.</p>
+
+                <p>Linux is the primary platform, with macOS support available through Docker Desktop. Windows requires WSL2. There is no native Windows binary yet, though NVIDIA has indicated this is coming. Cloud instances on AWS, GCP, Oracle Cloud, and Azure work without issues. I tested it on Oracle Cloud's free-tier instance and an AWS t3.micro without problems. The resource footprint is modest: OpenShell adds roughly 200MB of memory overhead, and the Nemotron policy model runs locally, so there is no ongoing API call overhead after the initial setup.</p>
+
+                <h2>How It Compares to Raw OpenClaw</h2>
+
+                <p>Raw OpenClaw with basic sandboxing gives you Docker container isolation, configurable tool access, and audit logging. That is a reasonable security baseline, but it is fundamentally a "deny by default, allow by list" approach that does not understand context. If you allow the filesystem tool, your agent can write anywhere in its workspace. If you allow network access, it can reach any host. There is no semantic understanding of whether a specific write or request is legitimate.</p>
+
+                <p><a href="/blog/openclaw-security-best-practices">NemoClaw adds the policy evaluation layer</a>. It knows that an agent writing to /tmp as part of a legitimate task is different from one writing to /etc/cron.d, even though both are filesystem writes within the allowed workspace. It can distinguish between an agent making an API call as part of its assigned workflow and one that is attempting to contact an external server based on instructions it received from an untrusted input. That context is the whole ballgame.</p>
+
+                <p>The practical difference shows up in the alert volume. With raw OpenClaw sandboxing, you are watching for tool invocations and hoping your tool configuration is tight enough. With NemoClaw, you are watching for policy overrides — events where the agent attempted something and the policy model said no. These are much rarer and much more meaningful when they occur.</p>
+
+                <p>The tradeoff is complexity. NemoClaw adds another moving part, another service to maintain, another dependency to keep running. For simple agents that do bounded, well-defined tasks, this might be unnecessary overhead. For agents that handle sensitive data, interact with multiple external services, or operate in environments where the attack surface is large, the added protection is worth it. Your call depends on your workload.</p>
+
+                <h2>Who It Is For</h2>
+
+                <p>NemoClaw targets three audiences. Enterprise users running agents in regulated environments get the most from it: they need audit trails, policy enforcement that is defensible to compliance teams, and isolation that goes beyond what basic containerization provides. Security-conscious developers who want defense in depth for personal projects or client work will appreciate the policy model's ability to catch mistakes before they become incidents. Advanced users with complex workflows that require more granular control than simple tool allowlists benefit from NemoClaw's contextual evaluation.</p>
+
+                <p>For someone just getting started with OpenClaw, NemoClaw is probably premature. Get comfortable with the <a href="/blog/openclaw-getting-started">basic sandbox first</a>, understand what your agents are doing, and add NemoClaw when you have a real need for the additional controls. It is not a replacement for learning how OpenClaw's permission system works — it is a layer on top of it.</p>
+
+                <p>The installation command is simple and the runtime overhead is reasonable. If you have a use case that involves sensitive data or complex network topology, it is worth evaluating. The security gains are real, even if they are hard to quantify in advance. Whether those gains justify the additional complexity depends entirely on what you are running and what the consequences of a compromise would be.</p>
+
+                <hr>
+
+                <p>If you want to see the full NemoClaw setup in action, <a href="/blog/openclaw-getting-started">our OpenClaw installation guide</a> includes a dedicated NemoClaw configuration walkthrough. Or grab the <a href="/lead">OpenClaw Starter Kit</a> for a production-ready config with NemoClaw pre-configured and the permissions audit checklist.</p>
+
+                <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 1px solid rgba(0, 245, 255, 0.2); border-radius: 12px; padding: 2rem; margin: 3rem 0; text-align: center;">
+                    <p style="color: #00f1ff; font-weight: 600; font-size: 1.125rem; margin-bottom: 0.75rem;">Get the OpenClaw Starter Kit</p>
+                    <p style="color: #ccd6f6; margin-bottom: 1.25rem;">One-command sandbox setup, pre-built skills, and a production-ready config. Everything you need to go from zero to running agent in under 15 minutes.</p>
+                    <a href="/lead" class="btn btn-primary">Download Free Starter Kit</a>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <p>&copy; 2026 Agent Debrief. All rights reserved.</p>
+                <nav class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/lead">Free Starter Kit</a>
+                    <a href="/privacy.html">Privacy Policy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
