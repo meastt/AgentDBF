@@ -159,13 +159,11 @@
                     <figcaption>NVIDIA's security layer for OpenClaw, reviewed</figcaption>
                 </figure>
 
-                <p>NemoClaw launched at GTC 2026 in March as NVIDIA's answer to a problem that was not theoretical anymore. Autonomous agents were running in production, connecting to real systems, handling real data — and the security model had not caught up. OpenClaw's built-in sandbox was a start, but NVIDIA saw an opportunity to build something more serious: a purpose-built security stack that understood what agents were trying to do and could make intelligent decisions about whether to let them do it.</p>
+                <p><a href="https://nvidia.com/nemoclaw">NemoClaw</a> launched at GTC 2026 in March as NVIDIA's answer to a problem that was not theoretical anymore. Autonomous agents were running in production, connecting to real systems, handling real data — and the security model had not caught up. OpenClaw's built-in sandbox was a start, but NVIDIA saw an opportunity to build something more serious: a purpose-built security stack that understood what agents were trying to do and could make intelligent decisions about whether to let them do it.</p>
 
-                <p>I spent a week running NemoClaw against a variety of agent workloads. Here is what it actually does, how to set it up, where it helps, and where it falls short.</p>
+                <p>I spent a week running NemoClaw against a variety of agent workloads. Here is what it actually does, how to set it up, where it helps, and where it falls short. For full installation docs, visit <a href="https://docs.openclaw.ai">the OpenClaw documentation</a>.</p>
 
                 <h2>What NemoClaw Actually Does</h2>
-
-                <p>NemoClaw combines two things NVIDIA had already built separately: the Nemotron family of LLMs and the OpenShell container runtime. Nemotron models are trained on security-relevant datasets and fine-tuned to evaluate agent behavior against policy rules. OpenShell is a lightweight container runtime optimized for the rapid-start, short-lived container pattern that agentic workloads create. NemoClaw is the layer that connects them to OpenClaw.</p>
 
                 <figure>
                     <img src="/images/nemoclaw-architecture.jpg" alt="NemoClaw architecture diagram showing OpenShell sandbox, Nemotron models, and policy guardrails">
@@ -205,7 +203,7 @@
 
                 <p>NemoClaw targets three audiences. Enterprise users running agents in regulated environments get the most from it: they need audit trails, policy enforcement that is defensible to compliance teams, and isolation that goes beyond what basic containerization provides. Security-conscious developers who want defense in depth for personal projects or client work will appreciate the policy model's ability to catch mistakes before they become incidents. Advanced users with complex workflows that require more granular control than simple tool allowlists benefit from NemoClaw's contextual evaluation.</p>
 
-                <p>For someone just getting started with OpenClaw, NemoClaw is probably premature. Get comfortable with the <a href="/blog/openclaw-getting-started">basic sandbox first</a>, understand what your agents are doing, and add NemoClaw when you have a real need for the additional controls. It is not a replacement for learning how OpenClaw's permission system works — it is a layer on top of it.</p>
+                <p>For someone just getting started with OpenClaw, NemoClaw is probably premature. Get comfortable with the <a href="/blog/openclaw-getting-started">basic sandbox first</a>, understand what your agents are doing, and add NemoClaw when you have a real need for the additional controls. If you are not yet familiar with <a href="/blog/what-is-agentic-ai">how agentic AI works</a>, start there first. It is not a replacement for learning how OpenClaw's permission system works — it is a layer on top of it.</p>
 
                 <p>The installation command is simple and the runtime overhead is reasonable. If you have a use case that involves sensitive data or complex network topology, it is worth evaluating. The security gains are real, even if they are hard to quantify in advance. Whether those gains justify the additional complexity depends entirely on what you are running and what the consequences of a compromise would be.</p>
 
@@ -217,6 +215,28 @@
                     <p style="color: #00f1ff; font-weight: 600; font-size: 1.125rem; margin-bottom: 0.75rem;">Get the OpenClaw Starter Kit</p>
                     <p style="color: #ccd6f6; margin-bottom: 1.25rem;">One-command sandbox setup, pre-built skills, and a production-ready config. Everything you need to go from zero to running agent in under 15 minutes.</p>
                     <a href="/lead" class="btn btn-primary">Download Free Starter Kit</a>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <p>&copy; 2026 Agent Debrief. All rights reserved.</p>
+                <nav class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/lead">Free Starter Kit</a>
+                    <a href="/privacy.html">Privacy Policy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+load Free Starter Kit</a>
                 </div>
 
             </article>

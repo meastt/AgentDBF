@@ -219,7 +219,7 @@
 
                 <p>Most production workloads should use strict. The restrictions are significant. Your agent cannot exfiltrate data to an external host, cannot reach sensitive internal services like database ports, and cannot execute commands that could damage the system. If strict blocks something your agent legitimately needs, that is a signal to reconsider your architecture rather than immediately dropping to a weaker policy. You probably need to restructure how your agent accesses that resource, not weaken the guardrails.</p>
 
-                <p>The one-command installation pulls everything from <a href="https://nvidia.com/nemoclaw">NVIDIA's container registry</a>. It works on Linux and macOS, with Windows support through WSL2. After installation, NemoClaw runs as a background service that your openclaw.json connects to automatically. The logs show every policy decision, so you can audit what was allowed and what was blocked.</p>
+                <p>The one-command installation pulls everything from <a href="https://nvidia.com/nemoclaw">NVIDIA's container registry</a>. It works on Linux and macOS, with Windows support through WSL2. After installation, NemoClaw runs as a background service that your openclaw.json connects to automatically. The logs show every policy decision, so you can audit what was allowed and what was blocked. For full documentation, visit <a href="https://docs.openclaw.ai/security">the OpenClaw security docs</a>.</p>
 
                 <h2>Monitoring and Audit Logs</h2>
 
@@ -247,7 +247,7 @@
 
                 <p>Want a production-ready sandbox configuration and step-by-step walkthrough for securing your first real agent workflow? <a href="/blog/openclaw-getting-started">Our installation guide</a> walks through the full NemoClaw setup, and the <a href="/lead">OpenClaw Starter Kit</a> includes a locked-down config with a permissions audit checklist.</p>
 
-                <p>If you want to go deeper on agentic AI and the security tradeoffs that come with it, subscribe to the Agent Debrief newsletter. Weekly articles, real-world use cases, and analysis from builders who are actually shipping with autonomous agents.</p>
+                <p>If you want to go deeper on <a href="/blog/what-is-agentic-ai">agentic AI</a> and the security tradeoffs that come with it, subscribe to the Agent Debrief newsletter. Weekly articles, real-world use cases, and analysis from builders who are actually shipping with autonomous agents.</p>
 
                 <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 1px solid rgba(0, 245, 255, 0.2); border-radius: 12px; padding: 2rem; margin: 3rem 0; text-align: center;">
                     <p style="color: #00f1ff; font-weight: 600; font-size: 1.125rem; margin-bottom: 0.75rem;">Get the OpenClaw Starter Kit</p>
