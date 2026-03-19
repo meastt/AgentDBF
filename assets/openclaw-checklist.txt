@@ -1,0 +1,35 @@
+OpenClaw Starter Kit — Quick-Start Checklist
+=============================================
+
+BEFORE YOU BEGIN
+[ ] Node.js v22+ installed (run: node --version)
+[ ] Docker installed (run: docker --version)
+[ ] Docker Compose installed (run: docker compose version)
+[ ] 5GB free disk space
+[ ] A Buttondown account (for API key — free tier works)
+
+SETUP
+[ ] Download the starter kit
+[ ] Run: chmod +x openclaw-starter.sh
+[ ] Run: ./openclaw-starter.sh
+[ ] Copy the agent command from the output
+[ ] Set your API key in the .env file (OPENAI_API_KEY or ANTHROPIC_API_KEY)
+
+YOUR FIRST AGENT
+[ ] Run: openclaw run --name "my-first-agent"
+[ ] Give it a simple task: "List the files in this directory"
+[ ] Try: "Write a short paragraph about AI agents to a file called notes.txt"
+[ ] Try: "Search the web for the latest OpenClaw news"
+
+SECURITY BEST PRACTICES
+[ ] Never run agents as root
+[ ] Always use .env for API keys, never hardcode them
+[ ] Review agent permissions before giving it tool access
+[ ] Keep your API keys rotated
+[ ] Use NemoClaw's sandbox mode for untrusted tasks
+
+NEXT STEPS
+[ ] Join the OpenClaw Discord: https://discord.gg/openclaw
+[ ] Subscribe to Agent Debrief: https://agentdebrief.com/lead
+[ ] Explore OpenClaw skills on ClawhHub: https://clawhub.com
+[ ] Read the full OpenClaw docs: https://docs.openclaw.ai

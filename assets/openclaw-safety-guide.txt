@@ -1,0 +1,44 @@
+OpenClaw Safety Guide — Protect Your Systems
+============================================
+
+WHY SECURITY MATTERS
+Agentic AI can take actions on your behalf: read files, run code,
+send emails, browse the web. Without guardrails, that power can be
+misused — accidentally or intentionally.
+
+THE GOLDEN RULES
+1.Least Privilege — Only give your agent the permissions it needs for
+  the task at hand. Nothing more.
+2.Sandboxing — Run agents in isolated environments (like NemoClaw's
+  OpenShell) where they can't touch your main system.
+3.API Key Hygiene — Store keys in .env files, never in code. Rotate
+  them regularly. Never commit .env to git.
+4.Review Before Action — Use --confirm flags for destructive operations
+  (file deletions, email sends, etc.)
+5.Human-in-the-Loop — For high-stakes actions (financial transactions,
+  external communications), require manual approval.
+
+COMMON MISTAKES TO AVOID
+- Running agents as root or admin — they don't need it
+- Giving agents access to your entire home directory
+- Using the same API key for everything
+- Letting agents auto-approve their own privileged actions
+- Ignoring logs — always review what your agent actually did
+
+WHAT TO DO IF SOMETHING GOES WRONG
+1. Kill the agent process: Ctrl+C or openclaw stop
+2. Revoke/rotate the API key it was using
+3. Check logs: openclaw logs --last
+4. Report to the OpenClaw community if it was a security issue
+5. Review and tighten your agent's permission scope
+
+SECURITY TOOLS IN OPENCLAW
+- openclaw sandbox — runs agent in isolated container
+- openclaw permissions list — shows current permission grants
+- openclaw permissions revoke — removes a specific permission
+- openclaw audit log — review all agent actions taken
+
+LINKS
+- OpenClaw Security Docs: https://docs.openclaw.ai/security
+- NemoClaw: https://nvidia.com/nemoclaw
+- Report a vulnerability: https://github.com/openclaw/openclaw/security
