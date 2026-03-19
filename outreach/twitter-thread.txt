@@ -1,0 +1,28 @@
+# Twitter/X Thread — OpenClaw Starter Kit Announcement
+
+---
+
+Tweet 1 (Hook):
+I've been running OpenClaw agents on Oracle Cloud free-tier for a year. The setup wasn't obvious. I wrote a starter kit so you don't have to figure it out the hard way.
+
+Tweet 2 (What it does):
+The OpenClaw Starter Kit covers:
+- Initial server config and security hardening
+- Gateway setup with proper bind settings
+- Cron-based health checks that actually work
+- Mobile app pairing without the "bootstrap token invalid" headache
+One doc, zero guesswork.
+
+Tweet 3 (Who it's for):
+If you're:
+- Running OpenClaw on a VPS or cloud instance
+- Setting up your first OpenClaw agent
+- Dealing with flaky mobile app connections
+This is for you. Builders-first, no fluff.
+
+Tweet 4 (How to get it):
+Free download via the Agent Debrief newsletter. Head to agentdebrief.com and grab it — or subscribe to The Daily Claw and get it along with daily OpenClaw ecosystem coverage.
+
+Tweet 5 (Link + CTA):
+Get the Starter Kit: https://agentdebrief.com
+Daily coverage of OpenClaw, agentic AI tools, and what's actually worth your attention: https://buttondown.com/the-daily-claw

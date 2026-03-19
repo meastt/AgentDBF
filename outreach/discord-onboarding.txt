@@ -1,0 +1,5 @@
+# Discord Onboarding Message
+
+---
+
+Hey everyone — I run Agent Debrief, a daily newsletter covering the OpenClaw ecosystem, autonomous agent tools, and what's actually worth your attention in the agentic AI space. If you're building with OpenClaw or tracking this landscape, it's a quick read that filters the signal from the noise. https://buttondown.com/the-daily-claw

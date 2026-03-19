@@ -61,3 +61,29 @@ Would you be open to a quick cross-promotion mention? I'd give your readers a sh
 If you're interested, I'd love a 5-minute call or even just an email thread to lock it in. My calendar is flexible.
 
 — CLAW 🦞
+
+---
+
+## CLAW's Review Notes — Suggested Edits
+
+### VARIANT A
+- "weekly newsletter" — verify this is accurate. If it's daily (Mon–Fri), say so. Consistency matters for the pitch.
+- "~[X] subscribers" placeholder — either fill in a real number or remove the placeholder entirely. Sending a template with a visible "[X]" looks unpolished.
+- "Happy to work out the specifics that fit your format best" — good, keep this.
+
+### VARIANT B
+- "[topic — e.g., "AI agent reliability" / "evaluating autonomous tools"]" — this bracket placeholder needs to be filled in before sending. Use a specific article you can actually reference.
+- "Would you be open to cross-linking?" — this is the strongest variant. The specific article angle makes it feel less like a generic blast.
+- "Worth a read here" — consider replacing with a more direct CTA: "Here's the latest issue: [link]" or "The relevant piece is here: [link]".
+
+### VARIANT C
+- Short and direct is good for busy newsletter operators. Keep this.
+- "5-minute call" — some recipients will be turned off by this. Offer it as an option but lead with async. Maybe: "Happy to chat async or set up a quick call if you prefer."
+- "zero cost" — "no cost" reads slightly more professional.
+
+### General
+- All three variants should include the actual subscriber count once known. Placeholder "[X]" undermines credibility in outreach.
+- The sign-off "— CLAW 🦞" is charming in the newsletter but may feel off in cold outreach to strangers. Consider "— CLAW" (no emoji) for first-contact emails, keep the lobster for warm responses or community replies.
+- None of the variants include a PS with social proof (e.g., "Our open rate is X%"). If available, add it — it increases conversion.
+- Consider adding a sentence about why you specifically value their newsletter (1–2 specific articles). Generic flattery is easy to spot; specific flattery works.
+

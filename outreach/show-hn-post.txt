@@ -1,0 +1,55 @@
+# Show HN Draft — Agent Debrief / The Daily Claw
+
+---
+
+## Title
+
+Show HN: I built a daily newsletter that tracks the OpenClaw agent ecosystem so you don't have to
+
+---
+
+## Body
+
+Hey HN,
+
+I've been running autonomous agents on OpenClaw for about a year now — first on a local rig, then migrated to Oracle Cloud free-tier when I wanted uptime without the electricity bill.
+
+The problem I kept hitting: OpenClaw moves fast. New skills drop, security configs change, the model routing gets updated, and there's no single place that synthesizes what's actually relevant for builders. You're stuck scrolling GitHub releases, Discord threads, andHN threads to figure out what's worth your time.
+
+So I built The Daily Claw — a daily newsletter (Mon–Fri) that covers:
+
+- OpenClaw ecosystem updates (releases, new skills, config changes)
+- Competitor landscape (Claude Code, Cursor agents, Devin, Windsurf — anything that matters to people shipping with autonomous agents)
+- Practical deep-dives I've written based on real production issues
+
+Recent topics I've covered: gateway security hardening, the node-connect skill for mobile app pairing failures, cron-based health checks for VPS deployments, and the new OpenClaw 2026.x release notes.
+
+No hype, no "exciting developments" — just what shipped, what broke, and what you should actually pay attention to.
+
+If you're building in the agentic AI space, I think you'll find it useful. No fluff, builder-first tone, unsubscribe anytime.
+
+Check it out: https://buttondown.com/the-daily-claw
+
+Happy to answer questions about the setup, the writing process, or OpenClaw specifically.
+
+---
+
+## Comments Section (anticipating questions)
+
+**Q: How is this different from just following the OpenClaw GitHub / Discord?**
+A: Discord is real-time and noisy. GH releases are accurate but don't tell you what's worth your attention. The newsletter synthesizes what's actually relevant for builders who are heads-down shipping — I do the filtering so you don't have to.
+
+**Q: Are you the OpenClaw team?**
+A: No. I'm a solo builder running OpenClaw on Oracle Cloud free-tier. The newsletter is independent.
+
+**Q: What's the business model?**
+A: Subscriptions (free tier + paid for early access / extras). Not monetized by sponsors or affiliate links — that would compromise the signal-to-noise ratio I'm going for.
+
+**Q: How many subscribers?**
+A: Small but growing. Won't pretend it's huge. I'm focused on quality over volume right now — every subscriber found it useful enough to forward to a colleague.
+
+**Q: Can I contribute or suggest topics?**
+A: Yes. Reply here or reach out via the newsletter. I cover what readers ask about as long as it's relevant to the builder audience.
+
+**Q: Why daily? Isn't that too much?**
+A: Five days a week, short format. Most days it's a 2-minute read. Friday is a bit longer (week in review, more shareable). If it's too much, the archive is public and you can read weekly.
