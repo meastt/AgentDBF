@@ -23,8 +23,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="index.css">
+    <!-- Stylesheet (root-relative so it works in /lead/) -->
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
     
@@ -33,7 +33,7 @@
     <header class="site-header">
         <div class="container nav-container">
             <a href="/" class="brand" style="text-decoration: none; color: inherit;">
-                <img src="logo.png" alt="Agent Debrief Logo" class="brand-logo" onerror="this.style.display='none'">
+                <img src="/logo.png" alt="Agent Debrief Logo" class="brand-logo" onerror="this.style.display='none'">
             </a>
             <nav class="main-nav">
                 <a href="/#subscribe" class="btn btn-ghost">Back to Main</a>

@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/lead",
+      "destination": "/lead/index.html"
+    }
+  ]
+}
