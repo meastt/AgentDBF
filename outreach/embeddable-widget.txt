@@ -1,0 +1,73 @@
+# Embeddable Email Capture Widget — Plan
+
+## Overview
+
+Add a lightweight email capture form to the Agent Debrief site that posts directly to
+Buttondown's embed subscribe endpoint. The form works without JavaScript (progressive
+enhancement) and can be dropped into any HTML page.
+
+## HTML Form Code
+
+```html
+<form
+  action="https://buttondown.com/api/emails/embed-subscribe/AGENTDEBRIEF"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.com/AGENTDEBRIEF', 'popupwindow')"
+  class="subscribe-form"
+>
+  <input type="email" name="email" placeholder="Enter your email address..." required>
+  <input type="hidden" value="1" name="embed">
+  <button type="submit">Subscribe</button>
+  <p class="privacy-note">No spam. One email per week.</p>
+</form>
+```
+
+Note: Replace AGENTDEBRIEF with the actual Buttondown username (currently "agentdebrief").
+
+## Placement Strategy
+
+### 1. Homepage Hero (ALREADY IN PLACE)
+The main index.html already has this form in the hero section. Keep it as-is.
+URL: https://agentdebrief.com/
+
+### 2. Blog Article Footers
+Add the form at the bottom of each blog article, after the article content and before the
+footer. This catches readers who finished an article and are most engaged.
+CSS class: `.article-subscribe`
+Target files:
+  - /blog/what-is-agentic-ai.html
+  - /blog/openclaw-getting-started.html
+
+### 3. Lead Magnet Page
+The /lead page already has a subscribe mechanism. Consider adding the embed form as a
+secondary capture below the main lead CTA for visitors who don't convert on the primary CTA.
+URL: https://agentdebrief.com/lead
+
+### 4. Link-in-Bio Page
+The new link-in-bio.html page serves as a social hub — add the embed form prominently at
+the top for any visitor who lands there from a social profile link.
+URL: https://agentdebrief.com/link-in-bio.html
+
+## Brand Color Styling Notes
+
+Use these CSS variables already defined in index.css:
+
+  --bg-void:      #09090B   (page background)
+  --bg-surface:   #18181B   (input field background)
+  --border-color: #27272A   (input border)
+  --text-primary: #FAFAFA   (input text, button text)
+  --accent-cyan:  #00F0FF   (links, focus rings, accent highlights)
+
+Form styling should match the existing `.subscribe-form` in index.css:
+  - Input: bg-surface, border-color border, 6px radius, white text
+  - Button: btn-primary (white bg, dark text)
+  - On focus: border-color → accent-cyan (#00F0FF)
+  - Privacy note: text-secondary color, 0.85rem font size
+
+## Optional Enhancements
+
+- Add a honeypot field for spam protection (name="bd_honeypot" style="display:none")
+- Add a "first name" field for personalization (Buttondown supports name=metadata)
+- A/B test different copy: "Get the Debrief" vs "Join 500+ builders" (update when ready)
+- Track conversions by adding UTM parameters to the form action URL

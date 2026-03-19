@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Story | Agent Debrief</title>
+    <meta name="description" content="Have a story idea or tip about OpenClaw, autonomous agents, or the agentic AI space? Submit it to Agent Debrief.">
+    <link rel="canonical" href="https://agentdebrief.com/submit-a-story.html">
+    <meta property="og:title" content="Submit a Story | Agent Debrief">
+    <meta property="og:description" content="Have a story idea or tip about OpenClaw, autonomous agents, or the agentic AI space? Submit it to Agent Debrief.">
+    <meta property="og:image" content="https://agentdebrief.com/og-banner-image.jpg">
+    <meta property="og:url" content="https://agentdebrief.com/submit-a-story.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Submit a Story | Agent Debrief">
+    <meta name="twitter:description" content="Have a story idea or tip about OpenClaw, autonomous agents, or the agentic AI space? Submit it to Agent Debrief.">
+    <meta name="twitter:image" content="https://agentdebrief.com/og-banner-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Agent Debrief",
+      "url": "https://agentdebrief.com",
+      "logo": "https://agentdebrief.com/logo.png",
+      "description": "The fastest-moving weekly debrief on OpenClaw, autonomous agents, and the tools builders are using right now."
+    }
+    </script>
+    <style>
+        .article-main { padding: 3rem 0 5rem; }
+        .article-content { max-width: 680px; margin: 0 auto; }
+
+        .form-group { margin-bottom: 1.5rem; }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-label span {
+            color: var(--accent-cyan);
+            margin-left: 2px;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-family: var(--font-inter);
+            font-size: 1rem;
+            transition: border-color 0.15s ease-in-out;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(161, 161, 170, 0.5);
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23A1A1AA' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            cursor: pointer;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 140px;
+            line-height: 1.6;
+        }
+
+        .form-hint {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.35rem;
+        }
+
+        .form-submit {
+            padding: 0.85rem 2rem;
+            background-color: var(--text-primary);
+            color: var(--bg-void);
+            border: none;
+            border-radius: 6px;
+            font-family: var(--font-inter);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+            margin-top: 0.5rem;
+        }
+
+        .form-submit:hover {
+            background-color: #E4E4E7;
+            transform: translateY(-1px);
+        }
+
+        .form-submit:active {
+            transform: translateY(0);
+        }
+
+        .submission-note {
+            margin-top: 1.5rem;
+            padding: 1rem 1.25rem;
+            background-color: rgba(0, 240, 255, 0.05);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .submission-note strong {
+            color: var(--accent-cyan);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+            transition: opacity 0.15s ease-in-out;
+        }
+
+        .back-link:hover { opacity: 0.8; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="glow-bg"></div>
+
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="/" class="brand" style="text-decoration:none;">
+                <img src="logo.png" alt="Agent Debrief Logo" class="brand-logo">
+            </a>
+            <nav class="main-nav">
+                <a href="/#subscribe" class="btn btn-primary">Subscribe</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-main">
+        <div class="container">
+            <div class="article-content">
+                <a href="/" class="back-link">← Back to Agent Debrief</a>
+
+                <div class="article-header">
+                    <h1>Submit a Story</h1>
+                    <p class="article-meta">Got a tip, lead, or story idea? We'd love to hear it.</p>
+                </div>
+
+                <div class="article-content" style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+                    <p>Agent Debrief covers OpenClaw ecosystem news, autonomous agent tools, and the rapidly evolving agentic AI landscape. If you've come across something worth covering — a new release, a clever build, an industry shift, or a tool that deserves attention — tell us about it.</p>
+                </div>
+
+                <form
+                    action="https://formspree.io/f/placeholder"
+                    method="POST"
+                    class="form-section"
+                >
+                    <div class="form-group">
+                        <label class="form-label" for="name">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Ada Lovelace" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address <span>*</span></label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="ada@example.com" required>
+                        <p class="form-hint">We'll only reach out if we need more context. Never shared.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="topic">Topic</label>
+                        <select id="topic" name="topic" class="form-select">
+                            <option value="">Select a topic...</option>
+                            <option value="openclaw-update">OpenClaw Update or Release</option>
+                            <option value="new-tool">New Agent Tool or Framework</option>
+                            <option value="industry-news">Industry News</option>
+                            <option value="tutorial">Tutorial or How-to Idea</option>
+                            <option value="opinion">Opinion or Hot Take</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="description">Story Description <span>*</span></label>
+                        <textarea id="description" name="description" class="form-textarea" placeholder="Tell us what you've found, why it matters, and any relevant links or context..." required></textarea>
+                        <p class="form-hint">The more detail the better — include sources, links, or anything that would help us verify and write about it.</p>
+                    </div>
+
+                    <button type="submit" class="form-submit">Send Submission</button>
+
+                    <div class="submission-note">
+                        <strong>Note:</strong> Submissions do not guarantee publication. We review every tip and will be in touch if we plan to follow up. We prioritize stories with verifiable sources and clear relevance to the OpenClaw/agentic AI builder community.
+                    </div>
+                </form>
+
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06);">
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                        Looking to subscribe instead?
+                        <a href="/#subscribe" style="color: var(--accent-cyan); text-decoration: none;">Join the newsletter</a>
+                        or
+                        <a href="/blog" style="color: var(--accent-cyan); text-decoration: none;">read the blog</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div>
+                <span>Agent Debrief &copy; 2026</span>
+            </div>
+            <nav class="footer-links">
+                <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+                <a href="/lead">Free Starter Kit</a>
+                <a href="/privacy.html">Privacy Policy</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
