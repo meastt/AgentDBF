@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Install OpenClaw: A Step-by-Step Guide | Agent Debrief</title>
+    <meta name="description" content="Learn how to install OpenClaw securely on macOS, Linux, or Windows (WSL2). Includes NemoClaw sandbox setup, permissions, and your first agent in under 10 minutes.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://agentdebrief.com/blog/openclaw-getting-started">
+    <link rel="stylesheet" href="/index.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="How to Install OpenClaw: A Step-by-Step Guide">
+    <meta property="og:description" content="Learn how to install OpenClaw securely on macOS, Linux, or Windows (WSL2). Includes NemoClaw sandbox setup, permissions, and your first agent in under 10 minutes.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://agentdebrief.com/blog/openclaw-getting-started">
+    <meta property="og:image" content="https://agentdebrief.com/og-banner-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Install OpenClaw: A Step-by-Step Guide">
+    <meta name="twitter:description" content="Learn how to install OpenClaw securely on macOS, Linux, or Windows (WSL2). Includes NemoClaw sandbox setup, permissions, and your first agent in under 10 minutes.">
+    <meta name="twitter:image" content="https://agentdebrief.com/og-banner-image.jpg">
+
+    <!-- TechArticle JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "How to Install OpenClaw: A Step-by-Step Guide",
+      "description": "A practical, step-by-step guide to installing OpenClaw on macOS, Linux, or Windows (WSL2), including NemoClaw sandbox configuration and first agent run.",
+      "author": {
+        "@type": "Organization",
+        "name": "Agent Debrief",
+        "url": "https://agentdebrief.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Agent Debrief",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://agentdebrief.com/logo.png"
+        }
+      },
+      "datePublished": "2026-03-19",
+      "dateModified": "2026-03-19",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "OpenClaw",
+        "applicationCategory": "DeveloperTools",
+        "operatingSystem": "macOS, Linux, Windows WSL2",
+        "url": "https://openclaw.ai"
+      },
+      "keywords": ["install OpenClaw", "OpenClaw setup", "OpenClaw tutorial", "OpenClaw security", "NemoClaw"],
+      "wordCount": 1400,
+      "inLanguage": "en-US"
+    }
+    </script>
+
+    <!-- FAQPage JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the system requirements for OpenClaw?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OpenClaw requires Node.js 18 or higher, Docker (Docker Desktop on macOS/Windows or Docker Engine on Linux), and an API key from a supported LLM provider like OpenRouter or Anthropic. It runs on macOS, Linux, and Windows via WSL2."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I fix 'openclaw: command not found' after npm install?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This is a PATH issue. Your npm global bin directory is not in your shell's PATH. Add 'export PATH=\"$(npm config get prefix)/bin:$PATH\"' to your shell profile (.bashrc, .zshrc), then reload your shell or run source ~/.bashrc."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Docker not running and how do I fix it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OpenClaw uses Docker to isolate agent tool execution. On macOS or Windows, open the Docker Desktop app and wait for it to report that Docker is running. On Linux, run 'sudo systemctl start docker' or 'sudo service docker start'. Run 'docker ps' to confirm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My API key returns a 401 error. What should I check?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "First, verify the key in openclaw.json has no extra spaces or quotes. Second, some models on OpenRouter require you to accept their usage terms on the OpenRouter website before you can use them. Log in and check the specific model's page if you are getting unexpected 401s."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does NemoClaw security sandbox work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NemoClaw wraps your agent in a sandboxed environment with policy-based controls. With the 'strict' policy enabled, your agent cannot write files outside its workspace, cannot make arbitrary network requests, and cannot run shell commands outside a permitted whitelist. You control the tool access through your agent definition, and all actions are logged."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I give my agent access to specific tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tools are not enabled by default. To grant access, add the tool name to the 'tools' array in your agent definition file (agents/main.js). For example, adding 'filesystem' to the tools array lets the agent read and write files in its workspace. Adding 'browser' gives it headless browser control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I run OpenClaw without Docker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Docker is required for the sandboxed tool execution layer. Without Docker, OpenClaw cannot isolate agent actions or enforce the security policies that NemoClaw provides. For development and testing, Docker Desktop on macOS or Windows is sufficient."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://agentdebrief.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://agentdebrief.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Install OpenClaw",
+          "item": "https://agentdebrief.com/blog/openclaw-getting-started"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="glow-bg"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="/" class="brand">
+                    <img src="/logo.png" alt="Agent Debrief" class="brand-logo">
+                    <span class="brand-text">Agent Debrief</span>
+                </a>
+                <a href="/lead" class="btn btn-primary">Get the Starter Kit</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-main">
+        <div class="container">
+            <article class="article-content">
+                <header class="article-header">
+                    <span class="badge">Guide</span>
+                    <h1>How to Install OpenClaw: A Step-by-Step Guide</h1>
+                    <p class="article-meta">Published March 19, 2026 · 10 min read</p>
+                </header>
+
+                <!-- Featured Image -->
+                <figure style="margin: 2rem 0;">
+                    <img src="/images/home-featured.jpg" alt="OpenClaw installation guide featured image" style="width: 100%; height: auto; border-radius: 12px;">
+                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">Your first agent, up and running in under 10 minutes</figcaption>
+                </figure>
+
+                <p>If you have used ChatGPT, you know the pattern: open a chat, ask a question, get an answer. Useful for quick tasks, but it resets every time. Nothing persists. Nothing connects to your real workflow.</p>
+
+                <p><a href="/blog/what-is-agentic-ai">OpenClaw is different</a>. It gives you persistent, autonomous agents that run on your own infrastructure, connect to real tools, and keep context across sessions. Instead of a chatbot that answers one question and forgets, you get an agent you can assign goals to, give tool access to, and let run while you focus on other things.</p>
+
+                <p>This guide walks you through installing OpenClaw on macOS, Linux, or Windows (WSL2), setting up the NemoClaw security sandbox, and running your first agent in under 10 minutes.</p>
+
+                <!-- In-content Image: Why OpenClaw -->
+                <figure style="margin: 2rem 0;">
+                    <img src="/images/agentic-ai-how-it-works.jpg" alt="OpenClaw agent architecture showing tools, sandbox, and model layers" style="width: 100%; height: auto; border-radius: 12px;">
+                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">How OpenClaw layers tools, sandboxing, and model access together</figcaption>
+                </figure>
+
+                <h2>Prerequisites</h2>
+
+                <p>Before you install OpenClaw, make sure your machine has the following three things.</p>
+
+                <p><strong>Node.js 18 or higher.</strong> OpenClaw runs as a Node.js application. Run <code>node -v</code> in your terminal to check your current version. If you do not have Node.js installed, download it from nodejs.org or use a version manager like nvm. Node 20 LTS is a safe choice.</p>
+
+                <p><strong>Docker.</strong> OpenClaw uses Docker to isolate agent tool execution. Install Docker Desktop on macOS or Windows, or Docker Engine on Linux. Make sure Docker is running before you start OpenClaw. Run <code>docker ps</code> to confirm it is up.</p>
+
+                <p><strong>An API key for a supported LLM provider.</strong> OpenClaw connects to models via <a href="https://openrouter.ai">OpenRouter</a> by default, which gives you access to Claude, GPT-4, Gemini, and others through a single API key. Sign up at openrouter.ai, generate a key, and keep it handy. You can also configure OpenClaw to use Anthropic directly if you prefer.</p>
+
+                <h2>Step 1: Install the OpenClaw CLI</h2>
+
+                <p>Open your terminal and run the following command:</p>
+
+<pre><code>npm install -g openclaw</code></pre>
+
+                <p>This installs the OpenClaw command-line interface globally. Once installed, you can run <code>openclaw</code> from any directory. Verify it worked by running:</p>
+
+<pre><code>openclaw --version</code></pre>
+
+                <p>You should see a version number printed to your terminal. If you get a permission error on macOS or Linux, run <code>sudo npm install -g openclaw</code> or configure npm to use a directory you own.</p>
+
+                <h2>Step 2: Initialize Your Agent Workspace</h2>
+
+                <p>Run the initialization command to set up the configuration files and workspace directory OpenClaw needs:</p>
+
+<pre><code>openclaw init my-first-agent</code></pre>
+
+                <p>This creates a directory called my-first-agent with a configuration file (<code>openclaw.json</code>) and an agents directory where you define your agent's behavior. Change into the directory:</p>
+
+<pre><code>cd my-first-agent</code></pre>
+
+                <p>Open <code>openclaw.json</code> in your text editor. You will need to add your API key. Look for the model configuration section and add your OpenRouter key:</p>
+
+<pre><code>{
+  "model": {
+    "provider": "openrouter",
+    "name": "anthropic/claude-opus-4",
+    "apiKey": "your-openrouter-key-here"
+  }
+}</code></pre>
+
+                <p>Save the file. The init command also creates a skills directory where you can drop in custom instructions for your agent.</p>
+
+                <h2>Step 3: Configure the NemoClaw Security Sandbox</h2>
+
+                <p>This is the step that separates OpenClaw from running a raw API key in a script. <a href="https://nvidia.com/nemoclaw">NemoClaw</a> wraps your agent in a sandboxed environment with policy-based controls over what your agent can and cannot do.</p>
+
+                <p>Open your <code>openclaw.json</code> file and add the NemoClaw configuration:</p>
+
+<pre><code>{
+  "model": {
+    "provider": "openrouter",
+    "name": "anthropic/claude-opus-4",
+    "apiKey": "your-openrouter-key-here"
+  },
+  "sandbox": {
+    "enabled": true,
+    "engine": "nemoclaw",
+    "policy": "strict"
+  }
+}</code></pre>
+
+                <p>The strict policy blocks file system writes outside the workspace, network calls to unknown hosts, and shell commands that are not explicitly whitelisted. You can adjust the policy level to moderate or permissive if you need more flexibility for specific tasks.</p>
+
+                <p>For full NemoClaw documentation, visit <a href="https://nvidia.com/nemoclaw">nvidia.com/nemoclaw</a>.</p>
+
+                <h2>Step 4: Run Your First Agent</h2>
+
+                <p>Define a simple agent in <code>agents/main.js</code>. The agents directory was created for you during init. Open <code>main.js</code> and add the following:</p>
+
+<pre><code>module.exports = {
+  name: "hello-agent",
+  description: "A simple agent that greets you and reports the current time.",
+  instructions: "When the user says hello, respond with a greeting and tell them what time it is right now.",
+  tools: ["shell"]
+};</code></pre>
+
+                <p>This is a minimal agent definition. The instructions field tells the agent what to do, and the tools array grants it access to specific capabilities. shell lets the agent run terminal commands. You can expand this later with browser, filesystem, http, and other tool access.</p>
+
+                <p>Start the agent by running:</p>
+
+<pre><code>openclaw dev</code></pre>
+
+                <p>You should see OpenClaw boot up, connect to your model provider, and await input. Type hello and press Enter. The agent will respond with a greeting and the current time.</p>
+
+                <p>If the agent does not respond, check that Docker is running (<code>docker ps</code>) and that your API key is correctly set in <code>openclaw.json</code>. See the troubleshooting section below for common issues.</p>
+
+                <!-- In-content Image: Security -->
+                <figure style="margin: 2rem 0;">
+                    <img src="/images/agentic-ai-why-now.jpg" alt="OpenClaw security architecture: sandbox, permissions, and audit logs" style="width: 100%; height: auto; border-radius: 12px;">
+                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">The security architecture behind NemoClaw sandboxing</figcaption>
+                </figure>
+
+                <h2>Security: What Your Agent Can and Cannot Do</h2>
+
+                <p>OpenClaw is designed so that by default, your agent cannot do anything destructive without explicit permission. Here is how the permission model works.</p>
+
+                <p><strong>The sandbox blocks unauthorized actions.</strong> With NemoClaw enabled and policy set to strict, your agent cannot write files outside its workspace, cannot make arbitrary network requests, and cannot run shell commands that are not explicitly whitelisted.</p>
+
+                <p><strong>You define the tool whitelist.</strong> When you add a tool to your agent definition, you are granting a specific permission. Adding filesystem to your tools array lets the agent read and write files in the workspace. Adding http lets it make web requests. Adding browser lets it control a headless browser. Each tool is a deliberate opt-in.</p>
+
+                <p><strong>Audit logs record everything.</strong> OpenClaw logs all tool invocations, API calls, and agent decisions to a local log file. You can review these logs to see exactly what your agent did and when.</p>
+
+                <p><strong>You can pull the plug at any time.</strong> Stop the <code>openclaw dev</code> process with Ctrl+C and the agent stops immediately. There is no background process that keeps running after you kill the terminal session.</p>
+
+                <h2>Troubleshooting</h2>
+
+                <p>Here are the most common issues people hit during installation.</p>
+
+                <p><strong>openclaw: command not found after npm install</strong></p>
+
+                <p>If the openclaw command is not found after running npm install -g, your npm global bin directory is probably not in your PATH. On macOS or Linux, add this to your shell profile:</p>
+
+<pre><code>export PATH="$(npm config get prefix)/bin:$PATH"</code></pre>
+
+                <p>Then reload your shell or run <code>source ~/.bashrc</code>.</p>
+
+                <p><strong>Docker is not running</strong></p>
+
+                <p>OpenClaw will fail with a connection error if Docker is not running. On macOS or Windows, open the Docker Desktop app and wait for it to report that Docker is running. On Linux, run <code>sudo systemctl start docker</code> or <code>sudo service docker start</code>.</p>
+
+                <p><strong>API key is rejected or returns 401</strong></p>
+
+                <p>Double-check that your API key in <code>openclaw.json</code> is exactly what OpenRouter gave you, with no extra spaces or quotes. Some models on OpenRouter also require you to accept usage terms on their website before you can use them. Log into openrouter.ai and check the model page if you are getting unexpected 401s.</p>
+
+                <p><strong>Agent runs but does not use tools</strong></p>
+
+                <p>If your agent responds but cannot use tools, check that you have added the tool to the tools array in your agent definition. Tools are not enabled by default. A filesystem tool will not work unless you add "filesystem" to the tools array.</p>
+
+                <p><strong>npm install fails with permission errors</strong></p>
+
+                <p>On shared systems, avoid running sudo npm install. Instead, configure npm to use a user-owned directory:</p>
+
+<pre><code>mkdir -p ~/npm-global
+npm config set prefix ~/npm-global
+export PATH=~/npm-global/bin:$PATH</code></pre>
+
+                <p>Then run <code>npm install -g openclaw</code> without sudo.</p>
+
+                <hr>
+
+                <p>You have a working agent running in a secure sandbox. From here, you can explore adding more tools, writing custom skills, or connecting your agent to external services like Slack, GitHub, or a database. The <a href="https://docs.openclaw.ai">OpenClaw documentation</a> has guides for all of these.</p>
+
+                <p>If you want a faster path to a fully configured agent with pre-built skills, security policies, and example workflows, download the OpenClaw Starter Kit. It includes a production-ready sandbox configuration, a set of starter skills, and a step-by-step walkthrough for getting your first real workflow running.</p>
+
+                <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 1px solid rgba(0, 245, 255, 0.2); border-radius: 12px; padding: 2rem; margin: 3rem 0; text-align: center;">
+                    <p style="color: #00f1ff; font-weight: 600; font-size: 1.125rem; margin-bottom: 0.75rem;">Get the OpenClaw Starter Kit</p>
+                    <p style="color: #ccd6f6; margin-bottom: 1.25rem;">One-command sandbox setup, pre-built skills, and a production-ready config. Everything you need to go from zero to running agent in under 15 minutes.</p>
+                    <a href="/lead" class="btn btn-primary">Download Free Starter Kit</a>
+                </div>
+
+                <p>Ready to go deeper on agentic AI? Subscribe to the Agent Debrief newsletter for weekly guides, analysis, and real-world use cases from builders who are actually shipping with autonomous agents.</p>
+
+                <!-- Infographic -->
+                <figure style="margin: 3rem 0;">
+                    <img src="/images/agentic-ai-infographic.jpg" alt="OpenClaw installation steps infographic" style="width: 100%; height: auto; border-radius: 12px;">
+                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">From zero to running agent: the full installation path</figcaption>
+                </figure>
+
+                <!-- Author Bio Box -->
+                <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 1px solid rgba(0, 245, 255, 0.2); border-radius: 12px; padding: 2rem; margin: 3rem 0;">
+                    <h3 style="color: #00f1ff; font-size: 1.125rem; margin-bottom: 0.75rem;">About Agent Debrief</h3>
+                    <p style="color: #ccd6f6; line-height: 1.7; margin-bottom: 0;">Intelligence For The Agentic Era. A weekly newsletter for OpenClaw builders and autonomous agent developers.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-container">
+                <p>&copy; 2026 Agent Debrief. All rights reserved.</p>
+                <nav class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/lead">Free Starter Kit</a>
+                    <a href="/privacy.html">Privacy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
