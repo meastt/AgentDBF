@@ -1,0 +1,5 @@
+# robots.txt for agentdebrief.com
+User-agent: *
+Allow: /
+
+Sitemap: https://agentdebrief.com/sitemap.xml
