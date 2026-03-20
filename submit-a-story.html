@@ -30,122 +30,6 @@
       "description": "The fastest-moving weekly debrief on OpenClaw, autonomous agents, and the tools builders are using right now."
     }
     </script>
-    <style>
-        .article-main { padding: 3rem 0 5rem; }
-        .article-content { max-width: 680px; margin: 0 auto; }
-
-        .form-group { margin-bottom: 1.5rem; }
-
-        .form-label {
-            display: block;
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .form-label span {
-            color: var(--accent-cyan);
-            margin-left: 2px;
-        }
-
-        .form-input,
-        .form-select,
-        .form-textarea {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
-            font-family: var(--font-inter);
-            font-size: 1rem;
-            transition: border-color 0.15s ease-in-out;
-        }
-
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: var(--accent-cyan);
-        }
-
-        .form-input::placeholder,
-        .form-textarea::placeholder {
-            color: rgba(161, 161, 170, 0.5);
-        }
-
-        .form-select {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23A1A1AA' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 1rem center;
-            cursor: pointer;
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 140px;
-            line-height: 1.6;
-        }
-
-        .form-hint {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-top: 0.35rem;
-        }
-
-        .form-submit {
-            padding: 0.85rem 2rem;
-            background-color: var(--text-primary);
-            color: var(--bg-void);
-            border: none;
-            border-radius: 6px;
-            font-family: var(--font-inter);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
-            margin-top: 0.5rem;
-        }
-
-        .form-submit:hover {
-            background-color: #E4E4E7;
-            transform: translateY(-1px);
-        }
-
-        .form-submit:active {
-            transform: translateY(0);
-        }
-
-        .submission-note {
-            margin-top: 1.5rem;
-            padding: 1rem 1.25rem;
-            background-color: rgba(0, 240, 255, 0.05);
-            border: 1px solid rgba(0, 240, 255, 0.15);
-            border-radius: 8px;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .submission-note strong {
-            color: var(--accent-cyan);
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            color: var(--accent-cyan);
-            text-decoration: none;
-            font-size: 0.875rem;
-            margin-bottom: 2rem;
-            transition: opacity 0.15s ease-in-out;
-        }
-
-        .back-link:hover { opacity: 0.8; text-decoration: underline; }
-    </style>
 </head>
 <body>
     <div class="glow-bg"></div>
@@ -161,7 +45,7 @@
         </div>
     </header>
 
-    <main class="article-main">
+    <main class="article-main submit-page">
         <div class="container">
             <div class="article-content">
                 <a href="/" class="back-link">← Back to Agent Debrief</a>
@@ -171,29 +55,27 @@
                     <p class="article-meta">Got a tip, lead, or story idea? We'd love to hear it.</p>
                 </div>
 
-                <div class="article-content" style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
-                    <p>Agent Debrief covers OpenClaw ecosystem news, autonomous agent tools, and the rapidly evolving agentic AI landscape. If you've come across something worth covering — a new release, a clever build, an industry shift, or a tool that deserves attention — tell us about it.</p>
-                </div>
+                <p class="submit-intro">Agent Debrief covers OpenClaw ecosystem news, autonomous agent tools, and the rapidly evolving agentic AI landscape. If you've come across something worth covering — a new release, a clever build, an industry shift, or a tool that deserves attention — tell us about it.</p>
 
                 <div class="submission-note">
                     <strong>Submit a story:</strong> Email <a href="mailto:newsletter@agentdebrief.com">newsletter@agentdebrief.com</a>
                     with:
-                    <ul style="margin: 0.75rem 0 0 1.25rem;">
+                    <ul>
                         <li>A clear title/topic</li>
                         <li>What happened and why it matters</li>
                         <li>Any links or sources you can share</li>
                     </ul>
-                    <div style="margin-top: 0.75rem;">
+                    <div class="submit-note-footer">
                         <strong>Note:</strong> Submissions do not guarantee publication. We review every tip and will follow up if we plan to cover it.
                     </div>
                 </div>
 
-                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06);">
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                <div class="submit-crosslinks">
+                    <p>
                         Looking to subscribe instead?
-                        <a href="/#subscribe" style="color: var(--accent-cyan); text-decoration: none;">Join the newsletter</a>
+                        <a href="/#subscribe">Join the newsletter</a>
                         or
-                        <a href="/blog" style="color: var(--accent-cyan); text-decoration: none;">read the blog</a>.
+                        <a href="/blog">read the blog</a>.
                     </p>
                 </div>
             </div>

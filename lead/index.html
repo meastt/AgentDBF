@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Get the OpenClaw Starter Kit — a one-command sandbox that gets a secure AI agent running in under 5 minutes. Includes checklist, safety guide, and step-by-step walkthrough.">
     <title>OpenClaw Starter Kit | Agent Debrief</title>
+    <link rel="canonical" href="https://agentdebrief.com/lead">
+    <link rel="icon" type="image/png" href="/favicon.png">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="OpenClaw Starter Kit | Agent Debrief">
@@ -26,13 +28,13 @@
     <!-- Stylesheet (root-relative so it works in /lead/) -->
     <link rel="stylesheet" href="/index.css">
 </head>
-<body>
+<body class="lead-page">
 
     <div class="glow-bg"></div>
 
     <header class="site-header">
         <div class="container nav-container">
-            <a href="/" class="brand" style="text-decoration: none; color: inherit;">
+            <a href="/" class="brand lead-brand">
                 <img src="/logo.png" alt="Agent Debrief Logo" class="brand-logo" onerror="this.style.display='none'">
             </a>
             <nav class="main-nav">
@@ -59,84 +61,84 @@
                         </div>
                         <p class="privacy-note">
                             After you confirm your email, you'll receive a link to <strong>the OpenClaw Starter Kit</strong>.
-                            <span style="color: #00f1ff; font-weight: 600;">No spam.</span> One high-signal email per week.
+                            <span class="text-accent">No spam.</span> One high-signal email per week.
                         </p>
                     </form>
 
-                    <!-- Featured Image -->
-                    <figure style="margin: 2rem 0 0;">
-                        <img src="/images/lead-magnet-featured.jpg" alt="OpenClaw Starter Kit: security-focused agent setup" style="width: 100%; height: auto; border-radius: 12px;">
-                        <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">Everything you need to run a secure AI agent in under 5 minutes</figcaption>
+                    <figure class="lead-hero-figure">
+                        <img src="/images/lead-magnet-featured.jpg" alt="OpenClaw Starter Kit: security-focused agent setup">
+                        <figcaption class="lead-figcaption">Everything you need to run a secure AI agent in under 5 minutes</figcaption>
                     </figure>
                 </div>
             </div>
         </section>
 
         <!-- What's Inside -->
-        <section style="padding: 4rem 0;">
+        <section class="lead-section">
             <div class="container">
-                <h2 style="text-align:center; font-size:1.75rem; margin-bottom:3rem;">What's Inside the Kit</h2>
+                <h2 class="lead-section-title">What's Inside the Kit</h2>
 
-                <!-- In-content Image: What's Inside -->
-                <figure style="margin: 0 auto 2rem; max-width: 700px;">
-                    <img src="/images/lead-magnet-contents.jpg" alt="OpenClaw Starter Kit contents: script, checklist, safety guide, sandbox" style="width: 100%; height: auto; border-radius: 12px;">
-                    <figcaption style="text-align: center; color: #8892b0; font-size: 0.875rem; margin-top: 0.75rem;">The four tools that get your agent running safely and fast</figcaption>
+                <figure class="lead-kit-figure">
+                    <img src="/images/lead-magnet-contents.jpg" alt="OpenClaw Starter Kit contents: script, checklist, safety guide, sandbox">
+                    <figcaption class="lead-figcaption">The four tools that get your agent running safely and fast</figcaption>
                 </figure>
 
-                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; max-width:900px; margin:0 auto;">
+                <div class="lead-wide">
+                    <div class="lead-kit-grid">
 
-                    <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:1.75rem;">
-                        <div style="font-size:2rem; margin-bottom:0.75rem;">&#128640;</div>
-                        <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">One-Command Setup Script</h3>
-                        <p style="color:#8892b0; font-size:0.9rem; margin:0;">Works on macOS and Linux. Windows users can use WSL2. Checks prerequisites and pulls everything automatically.</p>
+                        <div class="lead-kit-card">
+                            <div class="lead-kit-icon" aria-hidden="true">&#128640;</div>
+                            <h3 class="lead-kit-card-title">One-Command Setup Script</h3>
+                            <p class="lead-body-muted">Works on macOS and Linux. Windows users can use WSL2. Checks prerequisites and pulls everything automatically.</p>
+                        </div>
+
+                        <div class="lead-kit-card">
+                            <div class="lead-kit-icon" aria-hidden="true">&#128736;</div>
+                            <h3 class="lead-kit-card-title">NemoClaw Docker Sandbox</h3>
+                            <p class="lead-body-muted">Pre-configured OpenShell container. Your agent runs in isolation — it cannot touch your host system without explicit permission.</p>
+                        </div>
+
+                        <div class="lead-kit-card">
+                            <div class="lead-kit-icon" aria-hidden="true">&#9745;</div>
+                            <h3 class="lead-kit-card-title">Quick-Start Checklist</h3>
+                            <p class="lead-body-muted">A printable checklist covering every step from install to running your first agent. Print it, check it, done.</p>
+                        </div>
+
+                        <div class="lead-kit-card">
+                            <div class="lead-kit-icon" aria-hidden="true">&#128737;</div>
+                            <h3 class="lead-kit-card-title">Safety Guide</h3>
+                            <p class="lead-body-muted">Best practices for running agentic AI safely. Least privilege, sandboxing, API key hygiene, and what to do when something goes wrong.</p>
+                        </div>
+
                     </div>
-
-                    <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:1.75rem;">
-                        <div style="font-size:2rem; margin-bottom:0.75rem;">&#128736;</div>
-                        <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">NemoClaw Docker Sandbox</h3>
-                        <p style="color:#8892b0; font-size:0.9rem; margin:0;">Pre-configured OpenShell container. Your agent runs in isolation — it cannot touch your host system without explicit permission.</p>
-                    </div>
-
-                    <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:1.75rem;">
-                        <div style="font-size:2rem; margin-bottom:0.75rem;">&#9745;</div>
-                        <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Quick-Start Checklist</h3>
-                        <p style="color:#8892b0; font-size:0.9rem; margin:0;">A printable checklist covering every step from install to running your first agent. Print it, check it, done.</p>
-                    </div>
-
-                    <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:1.75rem;">
-                        <div style="font-size:2rem; margin-bottom:0.75rem;">&#128737;</div>
-                        <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Safety Guide</h3>
-                        <p style="color:#8892b0; font-size:0.9rem; margin:0;">Best practices for running agentic AI safely. Least privilege, sandboxing, API key hygiene, and what to do when something goes wrong.</p>
-                    </div>
-
                 </div>
             </div>
         </section>
 
         <!-- Who Is This For -->
-        <section style="padding: 4rem 0; background:rgba(0,0,0,0.2);">
-            <div class="container" style="max-width:700px;">
-                <h2 style="text-align:center; font-size:1.75rem; margin-bottom:2rem;">Who Is This For?</h2>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+        <section class="lead-section lead-section--band">
+            <div class="container lead-narrow">
+                <h2 class="lead-section-title lead-section-title--tight">Who Is This For?</h2>
+                <div class="lead-audience-grid">
 
-                    <div>
-                        <h3 style="font-size:1rem; margin-bottom:0.5rem;">&#128187; Developers</h3>
-                        <p style="color:#8892b0; font-size:0.9rem; margin:0;">You want to spin up a local agent without configuring a full dev environment. One script, one container, ready to go.</p>
+                    <div class="lead-audience-item">
+                        <h3 class="lead-mini-title">&#128187; Developers</h3>
+                        <p class="lead-body-muted">You want to spin up a local agent without configuring a full dev environment. One script, one container, ready to go.</p>
                     </div>
 
-                    <div>
-                        <h3 style="font-size:1rem; margin-bottom:0.5rem;">&#9881; Builders</h3>
-                        <p style="color:#8892b0; font-size:0.9rem; margin:0;">You're integrating AI agents into a workflow and need a reproducible sandbox that runs the same way every time.</p>
+                    <div class="lead-audience-item">
+                        <h3 class="lead-mini-title">&#9881; Builders</h3>
+                        <p class="lead-body-muted">You're integrating AI agents into a workflow and need a reproducible sandbox that runs the same way every time.</p>
                     </div>
 
-                    <div>
-                        <h3 style="font-size:1rem; margin-bottom:0.5rem;">&#128737; Security-Conscious AI Enthusiasts</h3>
-                        <p style="color:#8892b0; font-size:0.9rem; margin:0;">You're aware that agents can be dangerous if misconfigured. You want the safety guide and sandboxed execution built in from day one.</p>
+                    <div class="lead-audience-item">
+                        <h3 class="lead-mini-title">&#128737; Security-Conscious AI Enthusiasts</h3>
+                        <p class="lead-body-muted">You're aware that agents can be dangerous if misconfigured. You want the safety guide and sandboxed execution built in from day one.</p>
                     </div>
 
-                    <div>
-                        <h3 style="font-size:1rem; margin-bottom:0.5rem;">&#127760; Curious Operators</h3>
-                        <p style="color:#8892b0; font-size:0.9rem; margin:0;">You've heard about agentic AI and want a safe, low-friction way to try it without committing to a hosted service or complex setup.</p>
+                    <div class="lead-audience-item">
+                        <h3 class="lead-mini-title">&#127760; Curious Operators</h3>
+                        <p class="lead-body-muted">You've heard about agentic AI and want a safe, low-friction way to try it without committing to a hosted service or complex setup.</p>
                     </div>
 
                 </div>
@@ -144,62 +146,61 @@
         </section>
 
         <!-- How It Works -->
-        <section style="padding: 4rem 0;">
-            <div class="container" style="max-width:700px;">
-                <h2 style="text-align:center; font-size:1.75rem; margin-bottom:3rem;">How It Works</h2>
-                <div style="display:flex; flex-direction:column; gap:2rem; max-width:500px; margin:0 auto;">
+        <section class="lead-section">
+            <div class="container lead-narrow">
+                <h2 class="lead-section-title">How It Works</h2>
+                <div class="lead-steps">
 
-                    <div style="display:flex; gap:1.25rem; align-items:flex-start;">
-                        <div style="min-width:40px; height:40px; background:rgba(0,241,255,0.1); border:1px solid #00f1ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; color:#00f1ff; font-size:1rem;">1</div>
+                    <div class="lead-step">
+                        <div class="lead-step-num" aria-hidden="true">1</div>
                         <div>
-                            <h3 style="font-size:1.05rem; margin-bottom:0.35rem;">Download the Kit</h3>
-                            <p style="color:#8892b0; font-size:0.9rem; margin:0;">Enter your email and we'll send you the starter kit download link instantly.</p>
+                            <h3 class="lead-step-title">Download the Kit</h3>
+                            <p class="lead-body-muted">Enter your email and we'll send you the starter kit download link instantly.</p>
                         </div>
                     </div>
 
-                    <div style="display:flex; gap:1.25rem; align-items:flex-start;">
-                        <div style="min-width:40px; height:40px; background:rgba(0,241,255,0.1); border:1px solid #00f1ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; color:#00f1ff; font-size:1rem;">2</div>
+                    <div class="lead-step">
+                        <div class="lead-step-num" aria-hidden="true">2</div>
                         <div>
-                            <h3 style="font-size:1.05rem; margin-bottom:0.35rem;">Run the Setup Script</h3>
-                            <p style="color:#8892b0; font-size:0.9rem; margin:0;">One command. The script checks your system, pulls the NemoClaw image, and spins up a sandboxed container. Takes about 2 minutes.</p>
+                            <h3 class="lead-step-title">Run the Setup Script</h3>
+                            <p class="lead-body-muted">One command. The script checks your system, pulls the NemoClaw image, and spins up a sandboxed container. Takes about 2 minutes.</p>
                         </div>
                     </div>
 
-                    <div style="display:flex; gap:1.25rem; align-items:flex-start;">
-                        <div style="min-width:40px; height:40px; background:rgba(0,241,255,0.1); border:1px solid #00f1ff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; color:#00f1ff; font-size:1rem;">3</div>
+                    <div class="lead-step">
+                        <div class="lead-step-num" aria-hidden="true">3</div>
                         <div>
-                            <h3 style="font-size:1.05rem; margin-bottom:0.35rem;">Give Your Agent a Task</h3>
-                            <p style="color:#8892b0; font-size:0.9rem; margin:0;">Run <code style="background:rgba(0,241,255,0.08); padding:0.1em 0.4em; border-radius:4px; font-size:0.85em;">openclaw run --name my-first-agent</code> and chat with your agent. It runs in the sandbox, safe from your host system.</p>
+                            <h3 class="lead-step-title">Give Your Agent a Task</h3>
+                            <p class="lead-body-muted">Run <code class="lead-inline-code">openclaw run --name my-first-agent</code> and chat with your agent. It runs in the sandbox, safe from your host system.</p>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- CTA repeat -->
-                <div style="text-align:center; margin-top:3rem;">
-                    <a href="#lead-subscribe" class="btn btn-primary" style="font-size:1rem; padding:0.75rem 2rem;">Get the Free Kit</a>
-                    <p style="color:#8892b0; font-size:0.85rem; margin-top:1rem;">Includes the setup script, checklist, and safety guide.</p>
+                <div class="lead-cta-group">
+                    <a href="#lead-subscribe" class="btn btn-primary lead-cta-btn">Get the Free Kit</a>
+                    <p class="lead-cta-hint">Includes the setup script, checklist, and safety guide.</p>
                 </div>
             </div>
         </section>
 
         <!-- What's Included — File List -->
-        <section style="padding: 3rem 0; background:rgba(0,0,0,0.2);">
-            <div class="container" style="max-width:700px;">
-                <h2 style="text-align:center; font-size:1.5rem; margin-bottom:2rem;">Downloadable Files</h2>
-                <div style="display:flex; flex-direction:column; gap:0.75rem; max-width:500px; margin:0 auto;">
+        <section class="lead-section lead-section--band lead-section--tight">
+            <div class="container lead-narrow">
+                <h2 class="lead-section-title lead-section-title--small">Downloadable Files</h2>
+                <div class="lead-file-list">
 
-                    <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:0.875rem 1.25rem;">
-                        <span style="font-size:0.9rem;">Setup Script</span>
-                        <code style="font-size:0.8rem; color:#8892b0;">openclaw-starter.sh</code>
+                    <div class="lead-file-row">
+                        <span class="lead-file-name">Setup Script</span>
+                        <code class="lead-file-code">openclaw-starter.sh</code>
                     </div>
-                    <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:0.875rem 1.25rem;">
-                        <span style="font-size:0.9rem;">Quick-Start Checklist</span>
-                        <code style="font-size:0.8rem; color:#8892b0;">openclaw-checklist.txt</code>
+                    <div class="lead-file-row">
+                        <span class="lead-file-name">Quick-Start Checklist</span>
+                        <code class="lead-file-code">openclaw-checklist.txt</code>
                     </div>
-                    <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:0.875rem 1.25rem;">
-                        <span style="font-size:0.9rem;">Safety Guide</span>
-                        <code style="font-size:0.8rem; color:#8892b0;">openclaw-safety-guide.txt</code>
+                    <div class="lead-file-row">
+                        <span class="lead-file-name">Safety Guide</span>
+                        <code class="lead-file-code">openclaw-safety-guide.txt</code>
                     </div>
 
                 </div>
@@ -207,19 +208,19 @@
         </section>
 
         <!-- Trusted By / As Seen In (placeholder) -->
-        <section style="padding: 3rem 0;">
-            <div class="container" style="max-width:700px; text-align:center;">
-                <h2 style="font-size:1.25rem; margin-bottom:1rem; color:#8892b0;">Built for the OpenClaw Ecosystem</h2>
-                <p style="color:#5a6380; font-size:0.9rem;">Used by developers and builders in the OpenClaw community.</p>
+        <section class="lead-section lead-section--tight">
+            <div class="container lead-narrow lead-trust">
+                <h2 class="lead-section-title--micro">Built for the OpenClaw Ecosystem</h2>
+                <p class="lead-trust-sub">Used by developers and builders in the OpenClaw community.</p>
             </div>
         </section>
 
         <!-- Internal Links -->
-        <section style="padding: 0 0 4rem;">
-            <div class="container" style="max-width:700px; text-align:center;">
-                <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-                    <a href="/blog" style="color:#00f1ff; text-decoration:none; font-size:0.875rem;">Read the Blog →</a>
-                    <a href="/blog/what-is-agentic-ai" style="color:#00f1ff; text-decoration:none; font-size:0.875rem;">What Is Agentic AI? →</a>
+        <section class="lead-section--footer-pad">
+            <div class="container lead-narrow">
+                <div class="lead-nav-links">
+                    <a href="/blog" class="lead-nav-link">Read the Blog →</a>
+                    <a href="/blog/what-is-agentic-ai" class="lead-nav-link">What Is Agentic AI? →</a>
                 </div>
             </div>
         </section>

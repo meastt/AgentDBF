@@ -34,191 +34,8 @@
       ]
     }
     </script>
-    <style>
-        :root {
-            --bg-void: #09090B;
-            --bg-surface: #18181B;
-            --border-color: #27272A;
-            --text-primary: #FAFAFA;
-            --text-secondary: #A1A1AA;
-            --accent-cyan: #00F0FF;
-            --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            background-color: var(--bg-void);
-            color: var(--text-primary);
-            font-family: var(--font-inter);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 1rem 4rem;
-        }
-
-        .glow-bg {
-            position: fixed;
-            top: -20%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 240, 255, 0.05) 0%, rgba(9, 9, 11, 0) 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .bio-container {
-            width: 100%;
-            max-width: 480px;
-            text-align: center;
-        }
-
-        .brand-logo {
-            height: 96px;
-            width: auto;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-        }
-
-        .bio-brand-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.25rem;
-        }
-
-        .bio-tagline {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .bio-subscribe-form {
-            margin-bottom: 2.5rem;
-        }
-
-        .bio-subscribe-form input[type="email"] {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--text-primary);
-            font-family: var(--font-inter);
-            font-size: 1rem;
-            transition: border-color 0.15s ease-in-out;
-            margin-bottom: 0.5rem;
-        }
-
-        .bio-subscribe-form input[type="email"]:focus {
-            outline: none;
-            border-color: var(--accent-cyan);
-        }
-
-        .bio-subscribe-form input::placeholder {
-            color: rgba(161, 161, 170, 0.5);
-        }
-
-        .bio-subscribe-form button {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            background-color: var(--text-primary);
-            color: var(--bg-void);
-            border: none;
-            border-radius: 6px;
-            font-family: var(--font-inter);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.15s ease-in-out;
-        }
-
-        .bio-subscribe-form button:hover {
-            background-color: #E4E4E7;
-        }
-
-        .bio-privacy-note {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-top: 0.5rem;
-        }
-
-        .bio-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .bio-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 1.25rem;
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: border-color 0.15s ease-in-out, transform 0.15s ease-in-out;
-        }
-
-        .bio-link:hover {
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .bio-link-left {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .bio-link-icon {
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-cyan);
-            font-size: 1rem;
-        }
-
-        .bio-link-arrow {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-
-        .bio-divider {
-            width: 100%;
-            height: 1px;
-            background-color: var(--border-color);
-            margin: 2rem 0;
-            opacity: 0.4;
-        }
-
-        .bio-footer {
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-        }
-
-        .bio-footer a {
-            color: var(--accent-cyan);
-            text-decoration: none;
-        }
-
-        .bio-footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
-<body>
+<body class="bio-page">
     <div class="glow-bg"></div>
 
     <div class="bio-container">
@@ -226,7 +43,6 @@
         <h1 class="bio-brand-name">Agent Debrief</h1>
         <p class="bio-tagline">The fastest-moving weekly debrief on OpenClaw &amp; agentic AI</p>
 
-        <!-- Subscribe Form -->
         <form
             action="https://buttondown.com/api/emails/embed-subscribe/agentdebrief"
             method="post"
@@ -240,7 +56,6 @@
             <p class="bio-privacy-note">No spam. One email per week.</p>
         </form>
 
-        <!-- Navigation Links -->
         <div class="bio-links">
             <a href="https://buttondown.com/agentdebrief" class="bio-link" target="_blank" rel="noopener">
                 <span class="bio-link-left">
@@ -266,7 +81,7 @@
             <a href="https://github.com/agentdebrief" class="bio-link" target="_blank" rel="noopener">
                 <span class="bio-link-left">
                     <span class="bio-link-icon">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
                         </svg>
                     </span>
