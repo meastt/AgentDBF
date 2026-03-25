@@ -10,20 +10,18 @@ enhancement) and can be dropped into any HTML page.
 
 ```html
 <form
-  action="https://buttondown.com/api/emails/embed-subscribe/AGENTDEBRIEF"
+  action="https://buttondown.com/api/emails/embed-subscribe/agentdebrief"
   method="post"
   target="popupwindow"
-  onsubmit="window.open('https://buttondown.com/AGENTDEBRIEF', 'popupwindow')"
+  onsubmit="window.open('https://buttondown.com/agentdebrief', 'popupwindow')"
   class="subscribe-form"
 >
   <input type="email" name="email" placeholder="Enter your email address..." required>
   <input type="hidden" value="1" name="embed">
   <button type="submit">Subscribe</button>
-  <p class="privacy-note">No spam. One email per week.</p>
+  <p class="privacy-note">No spam. One email per week. A new tab may open to confirm your subscription.</p>
 </form>
 ```
-
-Note: Replace AGENTDEBRIEF with the actual Buttondown username (currently "agentdebrief").
 
 ## Placement Strategy
 

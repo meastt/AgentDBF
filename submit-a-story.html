@@ -32,20 +32,23 @@
     </script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <div class="glow-bg"></div>
 
     <header class="site-header">
         <div class="container nav-container">
-            <a href="/" class="brand" style="text-decoration:none;">
-                <img src="logo.png" alt="Agent Debrief Logo" class="brand-logo">
+            <a href="/" class="brand" style="text-decoration:none;" aria-label="Agent Debrief — home">
+                <img src="logo.png" alt="" class="brand-logo">
             </a>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Primary">
+                <a href="/blog" class="btn btn-ghost">Blog</a>
+                <a href="/lead" class="btn btn-ghost">Free Starter Kit</a>
                 <a href="/#subscribe" class="btn btn-primary">Subscribe</a>
             </nav>
         </div>
     </header>
 
-    <main class="article-main submit-page">
+    <main id="main" class="article-main submit-page">
         <div class="container">
             <div class="article-content">
                 <a href="/" class="back-link">← Back to Agent Debrief</a>
@@ -58,7 +61,7 @@
                 <p class="submit-intro">Agent Debrief covers OpenClaw ecosystem news, autonomous agent tools, and the rapidly evolving agentic AI landscape. If you've come across something worth covering — a new release, a clever build, an industry shift, or a tool that deserves attention — tell us about it.</p>
 
                 <div class="submission-note">
-                    <strong>Submit a story:</strong> Email <a href="mailto:newsletter@agentdebrief.com">newsletter@agentdebrief.com</a>
+                    <strong>Submit a story:</strong> Email <a href="mailto:news@agentdebrief.com">news@agentdebrief.com</a>
                     with:
                     <ul>
                         <li>A clear title/topic</li>
@@ -84,8 +87,9 @@
 
     <footer class="site-footer">
         <div class="container footer-container">
-            <div>
+            <div class="footer-brand">
                 <span>Agent Debrief &copy; 2026</span>
+                <p class="footer-made-by">Made by <a class="footer-credit-link" href="https://techridgeseo.com" target="_blank" rel="noopener noreferrer">Tech Ridge SEO</a></p>
             </div>
             <nav class="footer-links">
                 <a href="/">Home</a>

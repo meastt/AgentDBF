@@ -1,4 +1,4 @@
-# Social Post Drafts — The Daily Claw
+# Social Post Drafts — Agent Debrief
 
 ---
 
@@ -8,7 +8,7 @@
 ---
 OpenClaw ecosystem update: skills system, security hardening, and the new cron-based health checks are finally getting the love they deserve.
 
-Weekly brief for builders: https://buttondown.com/the-daily-claw
+Weekly brief for builders: https://buttondown.com/agentdebrief
 
 #OpenClaw #AIagents #agenticAI
 
@@ -18,7 +18,7 @@ Weekly brief for builders: https://buttondown.com/the-daily-claw
 ---
 Running autonomous agents in production? The gap between "it works locally" and "it runs reliably for weeks" is where most projects stall.
 
-The Daily Claw covers exactly this stuff — OpenClaw builders, every week. Worth a look: https://buttondown.com/the-daily-claw
+Agent Debrief covers exactly this stuff — OpenClaw builders, every week. Worth a look: https://buttondown.com/agentdebrief
 
 #AIagents #autonomousAI #builders
 
@@ -32,7 +32,7 @@ The OpenClaw ecosystem has quietly become one of the most practical stacks for d
 
 Skills system, security hardening guides, and a growing library of community-contributed workflows — it's starting to feel like the Rails of agentic AI.
 
-If you're building in this space, The Daily Claw is worth a weekly read. Focused signal, no fluff: https://buttondown.com/the-daily-claw
+If you're building in this space, Agent Debrief is worth a weekly read. Focused signal, no fluff: https://buttondown.com/agentdebrief
 
 ---
 
@@ -42,7 +42,7 @@ Most AI agent frameworks are optimized for demos. OpenClaw is optimized for actu
 
 That's the distinction that matters when you're evaluating what to build on. The ecosystem is maturing fast — worth paying attention to if you're in the autonomous agent space.
 
-Weekly brief for OpenClaw builders: https://buttondown.com/the-daily-claw
+Weekly brief for OpenClaw builders: https://buttondown.com/agentdebrief
 
 ---
 
@@ -50,17 +50,17 @@ Weekly brief for OpenClaw builders: https://buttondown.com/the-daily-claw
 
 ### Post 1 — #general
 ---
-Quick plug: if you're building with OpenClaw and want a weekly brief that filters the signal from the noise, The Daily Claw covers the ecosystem well. No fluff, just what's relevant. https://buttondown.com/the-daily-claw
+Quick plug: if you're building with OpenClaw and want a weekly brief that filters the signal from the noise, Agent Debrief covers the ecosystem well. No fluff, just what's relevant. https://buttondown.com/agentdebrief
 
 ### Post 2 — #general or #showcase
 ---
-Been experimenting with the new cron-based health checks for OpenClaw — solid upgrade for anyone running agents on a VPS. Covered the full setup in this week's Daily Claw if you want a walkthrough: https://buttondown.com/the-daily-claw
+Been experimenting with the new cron-based health checks for OpenClaw — solid upgrade for anyone running agents on a VPS. Covered the full setup in a recent Agent Debrief issue if you want a walkthrough: https://buttondown.com/agentdebrief
 
 ---
 
 ## Posting Guidelines
 - Keep it conversational. No hard sells.
-- Each post should stand alone — someone who doesn't know The Daily Claw should understand the value in one read.
+- Each post should stand alone — someone who doesn't know Agent Debrief should understand the value in one read.
 - Twitter/X: post Mon-Fri between 7-10 AM MST for best engagement.
 - LinkedIn: Tuesday-Thursday, 8-11 AM MST works best for B2B dev audiences.
 - Discord: Don't post more than once a week in any single channel. Space it out.

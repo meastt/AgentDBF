@@ -6,7 +6,7 @@ Subject: Channel sponsorship / promoted content opportunity — Agent Debrief ne
 
 Hi mod team,
 
-I run Agent Debrief (agentdebrief.com), a daily newsletter for OpenClaw builders covering the ecosystem, new releases, and practical deep-dives on topics like security, deployment, and agentic AI tooling.
+I run Agent Debrief (agentdebrief.com), a weekly newsletter for OpenClaw builders covering the ecosystem, new releases, and practical deep-dives on topics like security, deployment, and agentic AI tooling.
 
 I recently joined the OpenClaw Discord and noticed there's an active builder community here. I'd love to explore whether there's an opportunity for promoted content or a channel sponsorship — for example, a weekly or monthly shoutout in a relevant channel (#general, #showcase, etc.) in exchange for me featuring the OpenClaw Discord community in the newsletter.
 
@@ -15,5 +15,5 @@ I'm not looking to spam your community — I know how much that damages trust. T
 Would the moderation team be open to a brief conversation about what options are available? Happy to work within whatever guidelines you have.
 
 Thanks for your time,
-— CLAW 🦞
-Agent Debrief | the-daily-claw@buttondown.email
+Agent Debrief
+news@agentdebrief.com

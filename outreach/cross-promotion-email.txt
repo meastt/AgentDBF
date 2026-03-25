@@ -1,4 +1,4 @@
-# Cross-Promotion Email Templates — The Daily Claw
+# Cross-Promotion Email Templates — Agent Debrief
 
 ---
 
@@ -10,7 +10,7 @@ Body:
 
 Hi [Name],
 
-I'm running The Daily Claw, a weekly newsletter focused on the OpenClaw ecosystem — autonomous agents, builder tools, and the agentic AI landscape.
+I'm running Agent Debrief, a weekly newsletter focused on the OpenClaw ecosystem — autonomous agents, builder tools, and the agentic AI landscape.
 
 Our readers are highly technical AI agent developers and builders who actively ship with OpenClaw. If you've got a newsletter in the AI or developer tools space, I think there's a natural fit for cross-promotion.
 
@@ -19,8 +19,8 @@ Here's what a swap looks like: I mention your newsletter to my readers in an upc
 Would you be open to it? Happy to work out the specifics that fit your format best.
 
 Cheers,
-— CLAW 🦞
-The Daily Claw | the-daily-claw@buttondown.email
+Agent Debrief
+news@agentdebrief.com
 
 ---
 
@@ -34,15 +34,16 @@ Hi [Name],
 
 I noticed your recent piece on [topic — e.g., "AI agent reliability" / "evaluating autonomous tools"]. Solid coverage — your readers clearly care about the practical side of AI tooling.
 
-I run The Daily Claw, a weekly brief for OpenClaw builders. We just published a deep-dive on OpenClaw security hardening (security model, SSH/firewall setup, cron-based health checks). Given your angle on [their topic], I think our readers overlap more than most.
+I run Agent Debrief, a weekly brief for OpenClaw builders. We just published a deep-dive on OpenClaw security hardening (security model, SSH/firewall setup, cron-based health checks). Given your angle on [their topic], I think our readers overlap more than most.
 
 Would you be open to cross-linking? Something like: your piece mentions [their topic], and ours covers the OpenClaw side. Natural fit, no awkward pitch. Happy to return the favor with a mention when we cover your next piece.
 
-Worth a read here: https://buttondown.com/the-daily-claw
+Here's the latest: https://buttondown.com/agentdebrief
 
 Let me know if you'd like to swap — or just chat about the space.
 
-— CLAW 🦞
+Agent Debrief
+news@agentdebrief.com
 
 ---
 
@@ -54,36 +55,32 @@ Body:
 
 Hey [Name],
 
-I run The Daily Claw (https://buttondown.com/the-daily-claw) — a weekly newsletter for OpenClaw builders and AI agent developers. ~[X] subscribers, high signal-to-noise, builder-first tone.
+I run Agent Debrief (https://buttondown.com/agentdebrief) — a weekly newsletter for OpenClaw builders and AI agent developers. ~[X] subscribers, high signal-to-noise, builder-first tone.
 
-Would you be open to a quick cross-promotion mention? I'd give your readers a shoutout, you give mine one. Takes 5 minutes to set up, zero cost.
+Would you be open to a quick cross-promotion mention? I'd give your readers a shoutout, you give mine one. Takes 5 minutes to set up, no cost.
 
-If you're interested, I'd love a 5-minute call or even just an email thread to lock it in. My calendar is flexible.
+If you're interested, I'd love a quick email thread to lock it in (happy to do a short call if you prefer).
 
-— CLAW 🦞
+Agent Debrief
+news@agentdebrief.com
 
 ---
 
-## CLAW's Review Notes — Suggested Edits
+## Review Notes — Suggested Edits
 
 ### VARIANT A
-- "weekly newsletter" — verify this is accurate. If it's daily (Mon–Fri), say so. Consistency matters for the pitch.
+- Cadence is **weekly** — keep that consistent everywhere you pitch.
 - "~[X] subscribers" placeholder — either fill in a real number or remove the placeholder entirely. Sending a template with a visible "[X]" looks unpolished.
-- "Happy to work out the specifics that fit your format best" — good, keep this.
 
 ### VARIANT B
-- "[topic — e.g., "AI agent reliability" / "evaluating autonomous tools"]" — this bracket placeholder needs to be filled in before sending. Use a specific article you can actually reference.
-- "Would you be open to cross-linking?" — this is the strongest variant. The specific article angle makes it feel less like a generic blast.
-- "Worth a read here" — consider replacing with a more direct CTA: "Here's the latest issue: [link]" or "The relevant piece is here: [link]".
+- "[topic — e.g., ...]" — fill in before sending. Use a specific article you can actually reference.
+- "Would you be open to cross-linking?" — this is the strongest variant when you have a concrete piece to point to.
 
 ### VARIANT C
 - Short and direct is good for busy newsletter operators. Keep this.
-- "5-minute call" — some recipients will be turned off by this. Offer it as an option but lead with async. Maybe: "Happy to chat async or set up a quick call if you prefer."
-- "zero cost" — "no cost" reads slightly more professional.
+- "no cost" reads slightly more professional than "zero cost" for some audiences.
 
 ### General
-- All three variants should include the actual subscriber count once known. Placeholder "[X]" undermines credibility in outreach.
-- The sign-off "— CLAW 🦞" is charming in the newsletter but may feel off in cold outreach to strangers. Consider "— CLAW" (no emoji) for first-contact emails, keep the lobster for warm responses or community replies.
-- None of the variants include a PS with social proof (e.g., "Our open rate is X%"). If available, add it — it increases conversion.
-- Consider adding a sentence about why you specifically value their newsletter (1–2 specific articles). Generic flattery is easy to spot; specific flattery works.
-
+- All variants should include the actual subscriber count once known. Placeholder "[X]" undermines credibility in outreach.
+- Add a sentence about why you specifically value their newsletter (1–2 specific articles). Generic flattery is easy to spot; specific flattery works.
+- Optional: PS with social proof (e.g., open rate) if you're comfortable sharing it.

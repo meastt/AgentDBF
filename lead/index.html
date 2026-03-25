@@ -20,6 +20,30 @@
     <meta name="twitter:description" content="Get a secure, sandboxed AI agent running in under 5 minutes.">
     <meta name="twitter:image" content="https://agentdebrief.com/og-banner-image.jpg">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "OpenClaw Starter Kit | Agent Debrief",
+      "description": "Get a secure, sandboxed AI agent running in under 5 minutes. Includes one-command setup, NemoClaw sandbox, checklist, and safety guide.",
+      "url": "https://agentdebrief.com/lead",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Agent Debrief",
+        "url": "https://agentdebrief.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Agent Debrief",
+        "url": "https://agentdebrief.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://agentdebrief.com/logo.png"
+        }
+      }
+    }
+    </script>
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,21 +53,23 @@
     <link rel="stylesheet" href="/index.css">
 </head>
 <body class="lead-page">
-
+    <a href="#main" class="skip-link">Skip to main content</a>
     <div class="glow-bg"></div>
 
     <header class="site-header">
         <div class="container nav-container">
-            <a href="/" class="brand lead-brand">
-                <img src="/logo.png" alt="Agent Debrief Logo" class="brand-logo" onerror="this.style.display='none'">
+            <a href="/" class="brand lead-brand" aria-label="Agent Debrief — home">
+                <img src="/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'">
             </a>
-            <nav class="main-nav">
-                <a href="/#subscribe" class="btn btn-ghost">Back to Main</a>
+            <nav class="main-nav" aria-label="Primary">
+                <a href="/blog" class="btn btn-ghost">Blog</a>
+                <a href="/#subscribe" class="btn btn-ghost">Subscribe</a>
+                <a href="/" class="btn btn-ghost">Home</a>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main">
 
         <!-- Hero -->
         <section class="hero">
@@ -61,7 +87,7 @@
                         </div>
                         <p class="privacy-note">
                             After you confirm your email, you'll receive a link to <strong>the OpenClaw Starter Kit</strong>.
-                            <span class="text-accent">No spam.</span> One high-signal email per week.
+                            <span class="text-accent">No spam.</span> One high-signal email per week. A new tab may open to confirm your subscription.
                         </p>
                     </form>
 
@@ -231,6 +257,7 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <span>Agent Debrief &copy; 2026</span>
+                <p class="footer-made-by">Made by <a class="footer-credit-link" href="https://techridgeseo.com" target="_blank" rel="noopener noreferrer">Tech Ridge SEO</a></p>
             </div>
             <nav class="footer-links">
                 <a href="/">Home</a>

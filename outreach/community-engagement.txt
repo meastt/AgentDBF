@@ -6,7 +6,7 @@
 
 ### Version 1 (Technical depth)
 ---
-Congrats on the launch — OpenClaw's architecture is solid for this use case. The security hardening guide in The Daily Claw archive covers some of the pitfalls worth knowing about before going deep. Worth a read if you're building anything production-facing.
+Congrats on the launch — OpenClaw's architecture is solid for this use case. The security hardening guide in the Agent Debrief archive covers some of the pitfalls worth knowing about before going deep. Worth a read if you're building anything production-facing.
 
 ### Version 2 (Builder perspective)
 ---
@@ -22,7 +22,7 @@ We're running OpenClaw on Oracle Cloud free-tier and it's been surprisingly stab
 
 ### #general — Version 1
 ---
-Hey folks — if you're into OpenClaw and the agentic AI space, The Daily Claw is a solid weekly brief that covers the ecosystem without the fluff. Builders-focused. https://buttondown.com/the-daily-claw
+Hey folks — if you're into OpenClaw and the agentic AI space, Agent Debrief is a solid weekly brief that covers the ecosystem without the fluff. Builders-focused. https://buttondown.com/agentdebrief
 
 ### #general — Version 2
 ---
@@ -39,7 +39,7 @@ Q on OpenClaw security: if you're exposing the gateway externally, make sure you
 ---
 
 ## Guidelines
-- Lead with value. Help first, mention second (or don't mention at all if not natural).
+- Lead with value. Help first, mention second (or don't mention it at all if not natural).
 - Never drop links without context — always tie them to the ongoing conversation.
 - If someone asks a question the newsletter has answered, link there. Otherwise, don't mention it.
 - Keep it conversational. No corporate tone, no emojis in HN comments.

@@ -1,10 +1,10 @@
-# Show HN Draft — Agent Debrief / The Daily Claw
+# Show HN Draft — Agent Debrief
 
 ---
 
 ## Title
 
-Show HN: I built a daily newsletter that tracks the OpenClaw agent ecosystem so you don't have to
+Show HN: Agent Debrief — a weekly newsletter on the OpenClaw agent ecosystem
 
 ---
 
@@ -14,21 +14,22 @@ Hey HN,
 
 I've been running autonomous agents on OpenClaw for about a year now — first on a local rig, then migrated to Oracle Cloud free-tier when I wanted uptime without the electricity bill.
 
-The problem I kept hitting: OpenClaw moves fast. New skills drop, security configs change, the model routing gets updated, and there's no single place that synthesizes what's actually relevant for builders. You're stuck scrolling GitHub releases, Discord threads, andHN threads to figure out what's worth your time.
+The problem I kept hitting: OpenClaw moves fast. New skills drop, security configs change, the model routing gets updated, and there's no single place that synthesizes what's actually relevant for builders. You're stuck scrolling GitHub releases, Discord threads, and HN threads to figure out what's worth your time.
 
-So I built The Daily Claw — a daily newsletter (Mon–Fri) that covers:
+So I built **Agent Debrief** — a weekly newsletter that covers:
 
 - OpenClaw ecosystem updates (releases, new skills, config changes)
-- Competitor landscape (Claude Code, Cursor agents, Devin, Windsurf — anything that matters to people shipping with autonomous agents)
-- Practical deep-dives I've written based on real production issues
+- The wider agentic AI tooling landscape (what matters if you're shipping with autonomous agents)
+- Practical deep-dives based on real production issues
 
-Recent topics I've covered: gateway security hardening, the node-connect skill for mobile app pairing failures, cron-based health checks for VPS deployments, and the new OpenClaw 2026.x release notes.
+Recent topics I've written about: gateway security hardening, the node-connect skill for mobile app pairing failures, cron-based health checks for VPS deployments, and OpenClaw release notes — framed as what to actually do about them.
 
-No hype, no "exciting developments" — just what shipped, what broke, and what you should actually pay attention to.
+No hype, no "exciting developments" — just what shipped, what broke, and what you should pay attention to.
 
-If you're building in the agentic AI space, I think you'll find it useful. No fluff, builder-first tone, unsubscribe anytime.
+If you're building in the agentic AI space, I think you'll find it useful. Builder-first tone, unsubscribe anytime.
 
-Check it out: https://buttondown.com/the-daily-claw
+Subscribe: https://buttondown.com/agentdebrief
+Site (guides + starter kit): https://agentdebrief.com
 
 Happy to answer questions about the setup, the writing process, or OpenClaw specifically.
 
@@ -51,5 +52,5 @@ A: Small but growing. Won't pretend it's huge. I'm focused on quality over volum
 **Q: Can I contribute or suggest topics?**
 A: Yes. Reply here or reach out via the newsletter. I cover what readers ask about as long as it's relevant to the builder audience.
 
-**Q: Why daily? Isn't that too much?**
-A: Five days a week, short format. Most days it's a 2-minute read. Friday is a bit longer (week in review, more shareable). If it's too much, the archive is public and you can read weekly.
+**Q: Why weekly?**
+A: One focused issue beats five thin ones for how I write. The archive is public if you want to binge or catch up.

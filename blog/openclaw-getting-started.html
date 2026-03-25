@@ -152,20 +152,25 @@
     </script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <div class="glow-bg"></div>
 
     <header class="site-header">
         <div class="container">
-            <nav class="nav-container">
-                <a href="/" class="brand">
-                    <img src="/logo.png" alt="Agent Debrief" class="brand-logo">
+            <nav class="nav-container" aria-label="Primary">
+                <a href="/" class="brand" aria-label="Agent Debrief — home">
+                    <img src="/logo.png" alt="" class="brand-logo">
                 </a>
-                <a href="/lead" class="btn btn-primary">Get the Starter Kit</a>
+                <div class="main-nav">
+                    <a href="/blog" class="btn btn-ghost">Blog</a>
+                    <a href="/#subscribe" class="btn btn-ghost">Subscribe</a>
+                    <a href="/lead" class="btn btn-primary">Get the Starter Kit</a>
+                </div>
             </nav>
         </div>
     </header>
 
-    <main class="article-main">
+    <main id="main" class="article-main">
         <div class="container">
             <article class="article-content">
                 <nav class="breadcrumb">
@@ -352,7 +357,10 @@ export PATH=~/npm-global/bin:$PATH</code></pre>
     <footer class="site-footer">
         <div class="container">
             <div class="footer-container">
-                <p>&copy; 2026 Agent Debrief. All rights reserved.</p>
+                <div class="footer-brand">
+                    <span>&copy; 2026 Agent Debrief. All rights reserved.</span>
+                    <p class="footer-made-by">Made by <a class="footer-credit-link" href="https://techridgeseo.com" target="_blank" rel="noopener noreferrer">Tech Ridge SEO</a></p>
+                </div>
                 <nav class="footer-links">
                     <a href="/">Home</a>
                     <a href="/blog">Blog</a>

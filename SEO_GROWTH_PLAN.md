@@ -131,18 +131,18 @@ Add the following structured data to every content page on agentdebrief.com:
 
 ## 5. Technical SEO Checklist for agentdebrief.com
 
-- [ ] Add `sitemap.xml` (auto-generated or manual)
-- [ ] Add `robots.txt` allowing all crawlers including AI bots
-- [ ] Implement canonical URLs on every page
-- [ ] Add `<meta name="description">` to every page (unique, keyword-rich)
-- [ ] Add Open Graph + Twitter Card meta on every page *(partially done)*
-- [ ] Implement `FAQPage` and `Article` JSON-LD schema
-- [ ] Ensure all pages are < 3 seconds load time (Vercel helps here)
+- [x] Add `sitemap.xml` (auto-generated or manual)
+- [x] Add `robots.txt` allowing all crawlers including AI bots
+- [x] Implement canonical URLs on every page *(privacy + content pages covered)*
+- [x] Add `<meta name="description">` to every page (unique, keyword-rich)
+- [x] Add Open Graph + Twitter Card meta on every page
+- [x] Implement `FAQPage` and article-style JSON-LD on tutorial/review pages; `Blog` + `WebPage` on key landers
+- [ ] Ensure all pages are < 3 seconds load time (optimize large hero images next)
 - [x] Add a `/blog` section with an `index.html` feed
-- [ ] Implement clean URLs for articles using the directory pattern: `/blog/[article-slug]/index.html`
-- [ ] Ensure `vercel.json` is configured for clean blog routing
+- [ ] Optional: migrate articles to `/blog/[slug]/index.html` *(clean URLs already work via `vercel.json` rewrites)*
+- [x] Ensure `vercel.json` is configured for clean blog routing
 - [ ] Internal linking strategy: every article links to 2–3 other articles
-- [ ] Add breadcrumb navigation with schema
+- [x] Breadcrumb navigation with `BreadcrumbList` schema on article pages *(in-content breadcrumb UI + JSON-LD)*
 
 ---
 
